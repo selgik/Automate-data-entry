@@ -1,0 +1,29 @@
+'Summary: this is Excel Macro'
+'1. Insert_button(): Enter values in Entry_Form worksheet and data will be transffered to assigned cells in the Tracker worksheet'
+'2. Celar button(): clear contents in the Tracker worksheet, with one button upon hitting the target.'
+
+
+
+Sub TEST_Insert_button()
+
+Dim a As Integer
+
+a = Worksheets("Tracker").Cells(1, 9).Value
+
+Worksheets("Tracker").Cells(a, 4) = Worksheets("Entry_Form").Cells(2, 7)
+Worksheets("Tracker").Cells(a, 7) = Worksheets("Entry_Form").Cells(3, 7)
+Worksheets("Tracker").Cells(a, 9) = Worksheets("Entry_Form").Cells(4, 7)
+Worksheets("Tracker").Cells(a, 8) = Worksheets("Entry_Form").Cells(5, 7)
+
+Worksheets("Entry_Form").Range("G2:G5").ClearContents
+
+End Sub
+Sub TEST_Clear_button()
+
+CarryOn = MsgBox("Are you sure to clear all?", vbYesNo, "ALERT")
+If CarryOn = vbYes Then
+
+Worksheets("Tracker").Range("D4:D400, G4:I400").ClearContents
+
+End If
+End Sub
