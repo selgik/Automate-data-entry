@@ -3,7 +3,7 @@
 '2. Celar button(): clear contents in the Tracker worksheet, with one button upon hitting the target.'
 
 
-
+-------------------------
 Sub TEST_Insert_button()
 
 Dim a As Integer
@@ -18,6 +18,9 @@ Worksheets("Tracker").Cells(a, 8) = Worksheets("Entry_Form").Cells(5, 7)
 Worksheets("Entry_Form").Range("G2:G5").ClearContents
 
 End Sub
+
+
+-----------------------
 Sub TEST_Clear_button()
 
 CarryOn = MsgBox("Are you sure to clear all?", vbYesNo, "ALERT")
