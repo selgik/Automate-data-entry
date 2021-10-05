@@ -1,4 +1,5 @@
-'Summary: this is Excel Macro'
+
+'SUMMARY: THIS IS EXCEL MACRO'
 '1. Insert_button(): Enter values in Entry_Form worksheet and data will be transffered to assigned cells in the Tracker worksheet'
 '2. Celar button(): clear contents in the Tracker worksheet, with one button upon hitting the target.'
 
