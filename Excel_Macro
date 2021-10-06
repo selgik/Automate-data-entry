@@ -2,8 +2,9 @@
 '--------------------------------------
 'SUMMARY: THIS IS EXCEL MACRO'
 '--------------------------------------
-'1. Insert_button(): Enter values in Entry_Form worksheet and data will be transffered to assigned cells in the Tracker worksheet
-'2. Celar button(): clear contents in the Tracker worksheet, with one button upon hitting the target.
+'1. What do we want to achive: when tracking error, user selects error types and add comments with comma. In one submit, issues will be tracked.
+'2. Insert_button(): Enter values in Entry_Form worksheet and data will be transffered to assigned cells in the Tracker worksheet
+'3. Celar button(): clear contents in the Tracker worksheet, with one button upon hitting the target.
 
 '--------------------------------------
 'GENERAL NOTE: 
@@ -37,7 +38,7 @@ Worksheets("Tracker").Cells(a, 7) = Worksheets("Entry_Form").Cells(3, 7)
 Worksheets("Tracker").Cells(a, 9) = Worksheets("Entry_Form").Cells(4, 7)
 Worksheets("Tracker").Cells(a, 8) = Worksheets("Entry_Form").Cells(5, 7)
 
-Worksheets("Entry_Form").Range("G2:G5").ClearContents
+Worksheets("Entry_Form").Range("Cell1:Cell2").ClearContents
 
 End Sub
 
@@ -65,8 +66,8 @@ Worksheets("Tracker").Cells(a, y5) = Worksheets("Entry_Form").Cells(x4, y6)
 
     '2. For splitted item
     Dup_Insert2
-    Dup_Insert3...etc.
-    
+    Dup_Insert3
+    'Repeat if needed
    
 Worksheets("Entry_Form").Range("Cell:Cell2").ClearContents
 
