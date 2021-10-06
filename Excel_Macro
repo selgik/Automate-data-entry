@@ -1,10 +1,31 @@
 
+'--------------------------------------
 'SUMMARY: THIS IS EXCEL MACRO'
-'1. Insert_button(): Enter values in Entry_Form worksheet and data will be transffered to assigned cells in the Tracker worksheet'
-'2. Celar button(): clear contents in the Tracker worksheet, with one button upon hitting the target.'
+'--------------------------------------
+'1. Insert_button(): Enter values in Entry_Form worksheet and data will be transffered to assigned cells in the Tracker worksheet
+'2. Celar button(): clear contents in the Tracker worksheet, with one button upon hitting the target.
+
+'--------------------------------------
+'GENERAL NOTE: 
+'--------------------------------------
+' A. (x,y) indicates (row#, column#) ex. row 3 coulmn C is Cells(3, 3) 
+' B. Stop loop: If ActiveSheet.Range("A1").Value = "" Then Exit Sub
+' D. When adding sub query, simply add query name without () 
+' D-1. Looks like there is no conept of subquery. It's hence important to put the sub code in the right position.
 
 
--------------------------
+
+
+
+
+
+'--------------------------------------
+'[1] Inser Button -1
+'--------------------------------------
+' Note (1): Found out reversing the order won't allow the transfer of data 
+'           - From: Worksheets("Tracker").Cells(a, 4) = Worksheets("Entry_Form").Cells(2, 7)
+'           - To: Worksheets("Entry_Form").Cells(2, 7) = Worksheets("Tracker").Cells(a, 4) ---> DIDN't WORK OUT!
+
 Sub TEST_Insert_button()
 
 Dim a As Integer
@@ -21,13 +42,92 @@ Worksheets("Entry_Form").Range("G2:G5").ClearContents
 End Sub
 
 
------------------------
+'--------------------------------------
+'[2] Inser Button -2
+'--------------------------------------
+Sub Anno_Insert_button()
+
+Worksheets("Entry_Form").Range("Cell:Cell2").ClearContents
+Worksheets("Entry_Form").Range("Cell3:Cell4").ClearContents
+
+Dim a As Integer
+
+a = Worksheets("Tracker").Cells(x,y).Value
+'where count number will be sitted
+
+    '1. Do a split first
+    Split1
+    Split2
+Worksheets("Tracker").Cells(a, y) = Worksheets("Entry_Form").Cells(x, y6)
+Worksheets("Tracker").Cells(a, y3) = Worksheets("Entry_Form").Cells(x2, y6)
+Worksheets("Tracker").Cells(a, y4) = Worksheets("Entry_Form").Cells(x3, y6)
+Worksheets("Tracker").Cells(a, y5) = Worksheets("Entry_Form").Cells(x4, y6)
+
+    '2. For splitted item
+    Dup_Insert2
+    Dup_Insert3...etc.
+    
+   
+Worksheets("Entry_Form").Range("Cell:Cell2").ClearContents
+
+End Sub
+
+
+
+'--------------------------------------
+'[3] Clear ALL Button
+'--------------------------------------
+
 Sub TEST_Clear_button()
 
 CarryOn = MsgBox("Are you sure to clear all?", vbYesNo, "ALERT")
 If CarryOn = vbYes Then
 
-Worksheets("Tracker").Range("D4:D400, G4:I400").ClearContents
+Worksheets("Tracker").Range("range1, range2").ClearContents
 
 End If
+End Sub
+
+
+'--------------------------------------
+'[4] Split Macro
+'--------------------------------------
+' Record macro to get code and insert
+
+
+'--------------------------------------
+'[5] Allow multiple selections in a Drop Down List
+'--------------------------------------
+
+'Reference: https://trumpexcel.com/select-multiple-items-drop-down-list-excel/
+' To allow multiple selections in a Drop Down List in Excel (without repetition)
+
+Private Sub Worksheet_Change(ByVal Target As Range)
+
+Dim Oldvalue As String
+Dim Newvalue As String
+Application.EnableEvents = True
+On Error GoTo Exitsub
+If Target.Address = "$A$1" Then '<-----example'
+  If Target.SpecialCells(xlCellTypeAllValidation) Is Nothing Then
+    GoTo Exitsub
+  Else: If Target.Value = "" Then GoTo Exitsub Else
+    Application.EnableEvents = False
+    Newvalue = Target.Value
+    Application.Undo
+    Oldvalue = Target.Value
+      If Oldvalue = "" Then
+        Target.Value = Newvalue
+      Else
+        If InStr(1, Oldvalue, Newvalue) = 0 Then
+            Target.Value = Oldvalue & "," & Newvalue 
+      Else:
+        Target.Value = Oldvalue
+      End If
+    End If
+  End If
+End If
+Application.EnableEvents = True
+Exitsub:
+Application.EnableEvents = True
 End Sub
