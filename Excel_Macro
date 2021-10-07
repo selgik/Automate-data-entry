@@ -11,11 +11,18 @@
 'SOLUTION: Depending on the scenario, two types of macro-enabled excel file can be created.
 '          (A) Type: if error type for given web link is generally within the range of 1-2. Track one error per link.
 '          (B) Type: if error type for given web link is more than 3+. Track multiple errors per link.
-'               Q. When using (B) Type macro, how do I add and match comments?
-'               A. Follow the exact order to match comment with error type as below:
-'                   - I need to select error type as: hamburger, dimsum, chicken and taco
-'                   - Follow the comment order as   : coke, tea, (blank)
-           
+
+
+'------------------------------------------------
+' PROBLEMATIC SCENARIO CASE STUDY
+'------------------------------------------------
+
+'QUESTION: When using (B) Type macro, how do I make sure that comment matches with certain type of error?
+'ANSWER  : Follow the exact order to match comment with error type as below:
+'          - Example: For error type "hamburger" only "coke" and "sprite" can come as matching comment.
+'          - When using Entry_Form, select error type in order: hamburger, dimsum, chicken and taco
+'          - Follow the comment order matched with error order: coke, tea, (blank) <--- if you want to skip comment
+
 '------------------------------------------------
 'IMPORTANT NOTE FOR FORMULA VBA: 
 '------------------------------------------------
