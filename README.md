@@ -1,2 +1,3 @@
 # Excel_Macro_Practice
-Excel macro to pull relevant information from the data entry form and track errors.
+- Summary: Excel macros and formulas to pull relevant information from the data entry form. 
+- Note   : To reduce time spent on selecting multiple items from the list and copying/pasting, I made simplified entry form linked with macros.
