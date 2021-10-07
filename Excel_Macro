@@ -30,13 +30,13 @@
 '------------------------------------------------
 'VBA CODES
 '------------------------------------------------
-' #1. Insert_ButtonA() 
+' #1. Insert_buttonA() 
 '   Reference: SUMMARY - WORKFLOW (2), SUMMARY - SOLUTION (A)
 '   Note.    : Reversing the order in the code will break the data transfer process. Ex:
 '              From: Worksheets("Tracker").Cells(a, 4) = Worksheets("Entry_Form").Cells(2, 7)
 '              To: Worksheets("Entry_Form").Cells(2, 7) = Worksheets("Tracker").Cells(a, 4) --> DIDN't WORK OUT!
 
-Sub TEST_Insert_button()
+Sub Insert_buttonA()
 
 Dim a As Integer
 
@@ -52,12 +52,12 @@ Worksheets("Entry_Form").Range("Cell1:Cell2").ClearContents
 End Sub
 
 '------------------------------------------------
-' #2. Insert_ButtonB() 
+' #2. Insert_buttonB() 
 '   Reference: SUMMARY - WORKFLOW (3), SUMMARY - SOLUTION (B)
 '   Note     : By using SplitMacro, selected items from the list will auto-assign to one and each cells. See #4.
 '              After 'transffering' items, Dup_Insert will move items left over as result of SplitMacro.
 
-Sub Anno_Insert_button()
+Sub Insert_buttonB()
 
 Dim a As Integer
 
@@ -73,10 +73,9 @@ Worksheets("Tracker").Cells(a, y3) = Worksheets("Entry_Form").Cells(x2, y6)
 Worksheets("Tracker").Cells(a, y4) = Worksheets("Entry_Form").Cells(x3, y6)
 Worksheets("Tracker").Cells(a, y5) = Worksheets("Entry_Form").Cells(x4, y6)
 
-    '2. For splitted item
+    '2. For splitted item: repeat as much as needed
     Dup_Insert2
     Dup_Insert3
-    'Repeat as much as needed
    
 Worksheets("Entry_Form").Range("Cell:Cell2").ClearContents
 
@@ -87,7 +86,7 @@ End Sub
 ' #3. Clear_button()
 '   Reference: SUMMARY - WORKFLOW (3)
 
-Sub TEST_Clear_button()
+Sub Clear_button()
 
 CarryOn = MsgBox("Are you sure to clear them all?", vbYesNo, "ALERT")
 If CarryOn = vbYes Then
@@ -105,7 +104,7 @@ End Sub
 '              Without If Activesheet.Ragne("").Value="" Then Exit Sub, macro will break when cell is blank.
 '              Record macro to obtain code: Data > Text To Columns > Delimited > commas.
 
-Sub CSplit()
+Sub Split()
 
 If ActiveSheet.Range("A1").Value = "" Then Exit Sub
 
