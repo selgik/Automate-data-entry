@@ -55,7 +55,7 @@ End Sub
 ' #2. Insert_ButtonB() 
 '   Reference: SUMMARY - WORKFLOW (3), SUMMARY - SOLUTION (B)
 '   Note     : By using SplitMacro, selected items from the list will auto-assign to one and each cells. See #4.
-               After 'transffering' items, Dup_Insert will move items left over as result of SplitMacro.
+'              After 'transffering' items, Dup_Insert will move items left over as result of SplitMacro.
 
 Sub Anno_Insert_button()
 
