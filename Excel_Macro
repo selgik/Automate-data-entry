@@ -1,14 +1,24 @@
 
-'--------------------------------------
-'SUMMARY: THIS IS EXCEL MACRO'
-'--------------------------------------
-'1. What do we want to achive: when tracking error, user selects error types and add comments with comma. In one submit, issues will be tracked.
-'2. Insert_button(): Enter values in Entry_Form worksheet and data will be transffered to assigned cells in the Tracker worksheet
-'3. Celar button(): clear contents in the Tracker worksheet, with one button upon hitting the target.
+'------------------------------------------------
+'# SUMMARY: REDUCE MANUAL ENTRY IN EXCEL VIA MACRO
 
-'--------------------------------------
+'1. Scenario: You are working in a QA project. In order to track the error, you need to fill the excel spreadsheet with necessary inforation.
+'             Those necessary information includes but not limited to: extract of given web link, the error group, type, sub type and comment.
+'             Everyday, you need to clear the contents in the table and repeat the process.
+'2. Workflow: (1) In the Entry_Form worksheet, you copy the web link*, select error type from list** and add comment.
+'             (2) You click Insert_Button() and information will be transffered to assigned cells in the Tracker worksheet.
+'             (3) At the end of the day, you click Clear button() in Tracker worksheet which alert you before clearing contents.
+'             
+' Use =MID (RIGHT(A1,LEN(A1)-FIND("from here",A1))),#,##) formula to extract certain part within web link.
+' Use data validation function and VLOOKUP formula to auto-populate corresponding error group. 
+
+'3. Solution: Depending on the scenario, two types of macro-enabled excel file can be created.
+'             Type [1] if error type for given web link is generally within the range of 1-2
+'             Type [2] if error type for given web link is more than 3+
+
+'------------------------------------------------
 'GENERAL NOTE: 
-'--------------------------------------
+'------------------------------------------------
 ' A. (x,y) indicates (row#, column#) ex. row 3 coulmn C is Cells(3, 3) 
 ' B. Stop loop: If ActiveSheet.Range("A1").Value = "" Then Exit Sub
 ' D. When adding sub query, simply add query name without () 
