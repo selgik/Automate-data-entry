@@ -1,39 +1,40 @@
-# SUMMARY: REDUCE MANUAL ENTRY IN EXCEL VIA MACRO
+'------------------------------------------------
+'SUMMARY: REDUCE MANUAL ENTRY IN EXCEL VIA MACRO
+'------------------------------------------------
 
-'1. Scenario: You are working in a QA project. In order to track the error, you need to fill the excel spreadsheet with necessary inforation.
-'             Those necessary information includes but not limited to: extract of given web link, the error group, type, sub type and comment.
-'             Everyday, you need to clear the contents in the table and repeat the process.
-'2. Workflow: (1) In the Entry_Form worksheet, you copy the web link*, select error type from list** and add comment.
-'             (2) You click Insert_Button() and information will be transffered to assigned cells in the Tracker worksheet.
-'             (3) At the end of the day, you click Clear button() in Tracker worksheet which alert you before clearing contents.
-'             
-' Use =MID (RIGHT(A1,LEN(A1)-FIND("from here",A1))),#,##) formula to extract certain part within web link.
-' Use data validation function and VLOOKUP formula to auto-populate corresponding error group. 
-
-'3. Solution: Depending on the scenario, two types of macro-enabled excel file can be created.
-'             Type [1] if error type for given web link is generally within the range of 1-2
-'             Type [2] if error type for given web link is more than 3+
+'SCENARIO: You are working in a QA project. In order to track the error, you need to fill the excel spreadsheet with necessary inforation.
+'          Those necessary information includes but not limited to: extract of given web link, the error group, type, sub type and comment.
+'          Everyday, you need to clear the contents in the table and repeat the process.
+'WORKFLOW: (1) In the Entry_Form worksheet, you copy the web link, select error type from list and add comment.
+'          (2) You click Insert_Button() and entered data will be transffered to assigned cells in the Tracker worksheet.
+'          (3) You click Clear button() in Tracker worksheet which alert you before clearing contents in the defined cells.
+'SOLUTION: Depending on the scenario, two types of macro-enabled excel file can be created.
+'          (A) Type: if error type for given web link is generally within the range of 1-2. Track one error per link.
+'          (B) Type: if error type for given web link is more than 3+. Track multiple errors per link.
 
 '------------------------------------------------
-'GENERAL NOTE: 
+'IMPORTANT NOTE FOR FORMULA VBA: 
 '------------------------------------------------
-' A. (x,y) indicates (row#, column#) ex. row 3 coulmn C is Cells(3, 3) 
-' B. Stop loop: If ActiveSheet.Range("A1").Value = "" Then Exit Sub
-' D. When adding sub query, simply add query name without () 
-' D-1. Looks like there is no conept of subquery. It's hence important to put the sub code in the right position.
+' FUNCTIONS & FORMULA:
+' 1. To extract certain part within web link: =MID (RIGHT(A1,LEN(A1)-FIND("from here",A1))),#,##)
+' 2. To auto-populate corresponding error group/sub-group: =VLOOKUP(TargetCell,ReferenceTableToSearh,2,FALSE)
+' 3. To highlight cell(s): Conditional formatting > New rule > Style: Classic > Use a formula to determine which cells to format
+
+' VBA:
+' 1. Cells(x, y) indicates Cells(row#, column#). Ex: row 3 coulmn C is Cells(3, 3) 
+' 2. Stop macro when/if cell is empty: If ActiveSheet.Range("A1").Value = "" Then Exit Sub
+' 3-1. To add certain VBA as sub query, simply add code name without () 
+' 3-2. Put the sub code in the right position.
 
 
-
-
-
-
-
-'--------------------------------------
-'[1] Inser Button -1
-'--------------------------------------
-' Note (1): Found out reversing the order won't allow the transfer of data 
-'           - From: Worksheets("Tracker").Cells(a, 4) = Worksheets("Entry_Form").Cells(2, 7)
-'           - To: Worksheets("Entry_Form").Cells(2, 7) = Worksheets("Tracker").Cells(a, 4) ---> DIDN't WORK OUT!
+'------------------------------------------------
+'VBA CODES
+'------------------------------------------------
+' #1. Insert_ButtonA() 
+'   Reference: SUMMARY - WORKFLOW (2), SUMMARY - SOLUTION (A)
+'   Note.    : Reversing the order in the code will break the data transfer process. Ex:
+'              From: Worksheets("Tracker").Cells(a, 4) = Worksheets("Entry_Form").Cells(2, 7)
+'              To: Worksheets("Entry_Form").Cells(2, 7) = Worksheets("Tracker").Cells(a, 4) --> DIDN't WORK OUT!
 
 Sub TEST_Insert_button()
 
@@ -50,14 +51,13 @@ Worksheets("Entry_Form").Range("Cell1:Cell2").ClearContents
 
 End Sub
 
+'------------------------------------------------
+' #2. Insert_ButtonB() 
+'   Reference: SUMMARY - WORKFLOW (3), SUMMARY - SOLUTION (B)
+'   Note     : By using SplitMacro, selected items from the list will auto-assign to one and each cells. See #4.
+               After 'transffering' items, Dup_Insert will move items left over as result of SplitMacro.
 
-'--------------------------------------
-'[2] Inser Button -2
-'--------------------------------------
 Sub Anno_Insert_button()
-
-Worksheets("Entry_Form").Range("Cell:Cell2").ClearContents
-Worksheets("Entry_Form").Range("Cell3:Cell4").ClearContents
 
 Dim a As Integer
 
@@ -65,8 +65,9 @@ a = Worksheets("Tracker").Cells(x,y).Value
 'where count number will be sitted
 
     '1. Do a split first
-    Split1
-    Split2
+    SplitMacro1
+    SplitMacro2
+    
 Worksheets("Tracker").Cells(a, y) = Worksheets("Entry_Form").Cells(x, y6)
 Worksheets("Tracker").Cells(a, y3) = Worksheets("Entry_Form").Cells(x2, y6)
 Worksheets("Tracker").Cells(a, y4) = Worksheets("Entry_Form").Cells(x3, y6)
@@ -75,21 +76,20 @@ Worksheets("Tracker").Cells(a, y5) = Worksheets("Entry_Form").Cells(x4, y6)
     '2. For splitted item
     Dup_Insert2
     Dup_Insert3
-    'Repeat if needed
+    'Repeat as much as needed
    
 Worksheets("Entry_Form").Range("Cell:Cell2").ClearContents
 
 End Sub
 
 
-
-'--------------------------------------
-'[3] Clear ALL Button
-'--------------------------------------
+'------------------------------------------------
+' #3. Clear_button()
+'   Reference: SUMMARY - WORKFLOW (3)
 
 Sub TEST_Clear_button()
 
-CarryOn = MsgBox("Are you sure to clear all?", vbYesNo, "ALERT")
+CarryOn = MsgBox("Are you sure to clear them all?", vbYesNo, "ALERT")
 If CarryOn = vbYes Then
 
 Worksheets("Tracker").Range("range1, range2").ClearContents
@@ -98,18 +98,32 @@ End If
 End Sub
 
 
-'--------------------------------------
-'[4] Split Macro
-'--------------------------------------
-' Record macro to get code and insert
+'------------------------------------------------
+' #4. Split()
+'   Reference: SUMMARY - SOLUTION (B)
+'   NOTE     : You may have to or may not need to select multiple error types. Hence Split may take and may not take. 
+'              Without If Activesheet.Ragne("").Value="" Then Exit Sub, macro will break when cell is blank.
+'              Record macro to obtain code: Data > Text To Columns > Delimited > commas.
 
+Sub CSplit()
 
-'--------------------------------------
-'[5] Allow multiple selections in a Drop Down List
-'--------------------------------------
+If ActiveSheet.Range("A1").Value = "" Then Exit Sub
 
-'Reference: https://trumpexcel.com/select-multiple-items-drop-down-list-excel/
-' To allow multiple selections in a Drop Down List in Excel (without repetition)
+    Range("A1").Select
+    Selection.TextToColumns Destination:=Range("A1"), DataType:=xlDelimited, _
+        TextQualifier:=xlDoubleQuote, ConsecutiveDelimiter:=False, Tab:=False, _
+        Semicolon:=False, Comma:=True, Space:=False, Other:=False, OtherChar _
+        :="/", FieldInfo:=Array(Array(1, 1), Array(2, 1), Array(3, 1)), _
+        TrailingMinusNumbers:=True
+        
+        
+End Sub
+
+'------------------------------------------------
+' #5. MultipleSelection()
+'   Reference: SUMMARY - SOLUTION (B)
+'   Note     : https://trumpexcel.com/select-multiple-items-drop-down-list-excel/
+'              To allow multiple selections in a Drop Down List in Excel (without repetition)
 
 Private Sub Worksheet_Change(ByVal Target As Range)
 
@@ -117,7 +131,7 @@ Dim Oldvalue As String
 Dim Newvalue As String
 Application.EnableEvents = True
 On Error GoTo Exitsub
-If Target.Address = "$A$1" Then '<-----example'
+If Target.Address = "$A$1" Then 
   If Target.SpecialCells(xlCellTypeAllValidation) Is Nothing Then
     GoTo Exitsub
   Else: If Target.Value = "" Then GoTo Exitsub Else
