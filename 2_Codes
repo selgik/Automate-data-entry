@@ -20,7 +20,6 @@ FUNCTIONS AND FORMULAS USED
 
 2. To auto-populate corresponding error group/sub-group: 
     =VLOOKUP(TargetCell,ReferenceTableToSearh,2,FALSE)
-    
 3. To highlight cell(s) and rows once certain amounts of errors are tracked: 
     Conditional formatting > New rule > Style: Classic > Use a formula to determine which cells to format
 
@@ -28,10 +27,8 @@ VBA USED
 
 1. Cells(x, y) indicates Cells(row#, column#). 
     Ex: row 3 coulmn C = Cells(3, 3) 
-    
 2. VBA to stop macro when/if cell is empty: 
-    If ActiveSheet.Range("A1").Value = "" Then Exit Sub
-    
+    If ActiveSheet.Range("A1").Value = "" Then Exit Sub 
 3. Tips:
     To add certain VBA as sub query, simply add code name without () 
     Put the sub code in the right position, otherwise it won't work as expected.
