@@ -3,7 +3,7 @@
 IMPORTANT NOTE FOR FUNCTIONS, FORMULAS AND VBA 
 ------------------------------------------------
 
-FUNCTIONS AND FORMULAS
+FUNCTIONS AND FORMULAS USED
 
 1. Extract certain part within string you enter in the Entry_Form worksheet. 
     =MID (RIGHT(A1,LEN(A1)-FIND("keyword",A1)),#,##)
@@ -24,7 +24,7 @@ FUNCTIONS AND FORMULAS
 3. To highlight cell(s) and rows once certain amounts of errors are tracked: 
     Conditional formatting > New rule > Style: Classic > Use a formula to determine which cells to format
 
-VBA:
+VBA USED
 
 1. Cells(x, y) indicates Cells(row#, column#). 
     Ex: row 3 coulmn C = Cells(3, 3) 
