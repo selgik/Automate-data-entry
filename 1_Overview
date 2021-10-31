@@ -1,0 +1,28 @@
+--------------------------------------------------
+OBJECTIVE: REDUCE MANUAL ENTRY IN EXCEL VIA MACRO
+--------------------------------------------------
+
+  1. Background: 
+      You are working in a QA project. You are reviewing contents that has an unique reference number. 
+      If you notice an error, you need to track its reference number, categorize errors and leave comments in the spreadsheet.
+      Once certain amounts of errors are captured, you clean the spreadsheet and repeat the process next day.
+      Necessary information that need to be tracked in this project includes:
+      (1) An extract of strings (ex. web link, file address, contents reference numbers etc.) 
+      (2) Nominal values organized by hirarchy (ex. The error group, error type, error sub type etc.)
+      (3) Strings (ex. comments)
+        
+  2. WORKFLOW: 
+      (1) In the Entry_Form worksheet, you copy the whole 1(1). Form will transfer extract in the linked table.
+      (2) In the Entry_Form worksheet, you select error type from the list and add comment.
+      (3) You click Insert_Button() and entered data will be transffered to assigned cells in the Tracker worksheet.
+      (4) You click Clear button() in Tracker worksheet which alert you before clearing contents in the defined cells.
+      
+  3. SOLUTION:
+      Depending on the scenario, two types of macro-enabled excel file can be created.
+      (1) Type: If one content would generally have 1-3 types of errors, track error per type. 
+                Example: You need to track two types of error, type A and B. 
+                You track error type A and user Insert_Button() and repeat process for tracking error type B. 
+      (2) Type: if one content would generally have 3+ types of errors, track error per content. 
+                Example: You need to track 4 types of error, type A,B,C and D.
+                You track error type A, B, C, D and user Insert_Button().
+- END - 
