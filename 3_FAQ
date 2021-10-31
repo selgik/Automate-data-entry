@@ -8,7 +8,7 @@ PROBLEMATIC SCENARIO AND FAQ
              For error type B "orange", for type C "coconut" and for type D "melon". 
              In the Tracker worksheet I want 4 rows to be generated separately per error type matched with its comments. 
              
-2. ANSWER: 
+   ANSWER: 
     Follow the error type order when adding comments.
     Example: When choosing the error types you followed the order of error type A, B, C and D.
              Then you follow the same order when entering comments by adding "apple", "organe", "coconut" and "melon".
