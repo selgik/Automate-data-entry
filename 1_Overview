@@ -4,8 +4,9 @@ OBJECTIVE: REDUCE MANUAL ENTRY IN EXCEL VIA MACRO
 
   1. Background: 
       You are working in a QA project. You are reviewing contents that has an unique reference number. 
-      If you notice an error, you need to track its reference number, categorize errors and leave comments in the spreadsheet.
+      If you notice an error, you track its reference number, categorize errors and leave comments in the spreadsheet.
       Once certain amounts of errors are captured, you clean the spreadsheet and repeat the process next day.
+      
       Necessary information that need to be tracked in this project includes:
       (1) An extract of strings (ex. web link, file address, contents reference numbers etc.) 
       (2) Nominal values organized by hirarchy (ex. The error group, error type, error sub type etc.)
