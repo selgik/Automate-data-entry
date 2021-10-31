@@ -13,10 +13,10 @@ OBJECTIVE: REDUCE MANUAL ENTRY IN EXCEL VIA MACRO
       (3) Strings (ex. comments)
         
   2. WORKFLOW: 
-      (1) In the Entry_Form worksheet, you copy the whole 1(1). Form will transfer extract in the linked table.
+      (1) In the Entry_Form worksheet, you copy the whole 1(1). Form will transfer its extract to the Tracker worksheet.
       (2) In the Entry_Form worksheet, you select error type from the list and add comment.
       (3) You click Insert_Button() and entered data will be transffered to assigned cells in the Tracker worksheet.
-      (4) You click Clear button() in Tracker worksheet which alert you before clearing contents in the defined cells.
+      (4) You click Clear_Button() in Tracker worksheet which alert you before clearing contents in the defined cells.
       
   3. SOLUTION:
       Depending on the scenario, two types of macro-enabled excel file can be created.
