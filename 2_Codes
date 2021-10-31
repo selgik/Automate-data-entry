@@ -1,27 +1,53 @@
 
-'------------------------------------------------
-'IMPORTANT NOTE FOR FORMULA VBA: 
-'------------------------------------------------
-' FUNCTIONS & FORMULA:
-' 1. To extract certain part within web link: =MID (RIGHT(A1,LEN(A1)-FIND("from here",A1))),#,##)
-' 2. To auto-populate corresponding error group/sub-group: =VLOOKUP(TargetCell,ReferenceTableToSearh,2,FALSE)
-' 3. To highlight cell(s): Conditional formatting > New rule > Style: Classic > Use a formula to determine which cells to format
+------------------------------------------------
+IMPORTANT NOTE FOR FUNCTIONS, FORMULAS AND VBA 
+------------------------------------------------
 
-' VBA:
-' 1. Cells(x, y) indicates Cells(row#, column#). Ex: row 3 coulmn C is Cells(3, 3) 
-' 2. Stop macro when/if cell is empty: If ActiveSheet.Range("A1").Value = "" Then Exit Sub
-' 3-1. To add certain VBA as sub query, simply add code name without () 
-' 3-2. Put the sub code in the right position.
+FUNCTIONS AND FORMULAS
 
+1. Extract certain part within string you enter in the Entry_Form worksheet. 
+    =MID (RIGHT(A1,LEN(A1)-FIND("keyword",A1)),#,##)
+    
+    (1) Formula : MID("text", start number, number of characters)
+                  Example: MID("apple", 2, 2) is pp.
+    (2) A1      : Once full reference number is entered in Entry_Form worksheet it will be transffered to A1 in Tracker worksheet. 
+                  This formula can be written in A2 while A1 is hidden, as we only need certain part of A1.
+    (3) keyword : Enter keyword you want the extract to start. 
+                  Example: Reference number of content has repeated patterns starting with UID. Say, 123e5##UID99ab00s.
+                  And the part you need is UID99ab00s. "UID" will be your keyword.
+    (4) #       : Start number
+    (5) ##      : Number of characters
+
+2. To auto-populate corresponding error group/sub-group: 
+    =VLOOKUP(TargetCell,ReferenceTableToSearh,2,FALSE)
+    
+3. To highlight cell(s) and rows once certain amounts of errors are tracked: 
+    Conditional formatting > New rule > Style: Classic > Use a formula to determine which cells to format
+
+VBA:
+
+1. Cells(x, y) indicates Cells(row#, column#). 
+    Ex: row 3 coulmn C = Cells(3, 3) 
+    
+2. VBA to stop macro when/if cell is empty: 
+    If ActiveSheet.Range("A1").Value = "" Then Exit Sub
+    
+3. Tips:
+    To add certain VBA as sub query, simply add code name without () 
+    Put the sub code in the right position, otherwise it won't work as expected.
+
+
+*** In order to differenciate between VBA codes vs notes, notes will be indicated with back tick ' mark below.
 
 '------------------------------------------------
 'VBA CODES
 '------------------------------------------------
+
 ' #1. Insert_buttonA() 
-'   Reference: SUMMARY - WORKFLOW (2), SUMMARY - SOLUTION (A)
-'   Note.    : Reversing the order in the code will break the data transfer process. Ex:
-'              From: Worksheets("Tracker").Cells(a, 4) = Worksheets("Entry_Form").Cells(2, 7)
-'              To: Worksheets("Entry_Form").Cells(2, 7) = Worksheets("Tracker").Cells(a, 4) --> DIDN't WORK OUT!
+'   Reference: Excel_Macro_Practice/1_Overview - 2(3), 3(1) 
+'   Note     : Reversing the order in the code will break the data transfer process. Ex:
+'              OK: Worksheets("Tracker").Cells(a, 4) = Worksheets("Entry_Form").Cells(2, 7)
+'              Not OK: Worksheets("Entry_Form").Cells(2, 7) = Worksheets("Tracker").Cells(a, 4)
 
 Sub Insert_buttonA()
 
@@ -40,7 +66,7 @@ End Sub
 
 '------------------------------------------------
 ' #2. Insert_buttonB() 
-'   Reference: SUMMARY - WORKFLOW (3), SUMMARY - SOLUTION (B)
+'   Reference: Excel_Macro_Practice/1_Overview - 2(3), 3(2) 
 '   Note     : By using SplitMacro, selected items from the list will auto-assign to one and each cells. See #4.
 '              After 'transffering' items, Dup_Insert will move items left over as result of SplitMacro.
 
@@ -71,7 +97,8 @@ End Sub
 
 '------------------------------------------------
 ' #3. Clear_button()
-'   Reference: SUMMARY - WORKFLOW (3)
+'   Reference: Excel_Macro_Practice/1_Overview - 3(2)
+
 
 Sub Clear_button()
 
@@ -86,10 +113,10 @@ End Sub
 
 '------------------------------------------------
 ' #4. Split()
-'   Reference: SUMMARY - SOLUTION (B)
-'   NOTE     : You may have to or may not need to select multiple error types. Hence Split may take and may not take. 
-'              Without If Activesheet.Ragne("").Value="" Then Exit Sub, macro will break when cell is blank.
-'              Record macro to obtain code: Data > Text To Columns > Delimited > commas.
+'   Reference: Excel_Macro_Practice/1_Overview - 3(2) 
+'   NOTE     : You may or may not have to select multiple error types. Similarly hence Split may or may not take. 
+'              Without 'If Activesheet.Ragne("").Value="" Then Exit Sub', macro will break when cell is blank.
+'              Record macro to obtain this code: Data > Text To Columns > Delimited > commas.
 
 Sub Split()
 
@@ -107,8 +134,8 @@ End Sub
 
 '------------------------------------------------
 ' #5. MultipleSelection()
-'   Reference: SUMMARY - SOLUTION (B)
-'   Note     : https://trumpexcel.com/select-multiple-items-drop-down-list-excel/
+'   Reference: Excel_Macro_Practice/1_Overview - 3(2)
+'   Credit   : https://trumpexcel.com/select-multiple-items-drop-down-list-excel/
 '              To allow multiple selections in a Drop Down List in Excel (without repetition)
 
 Private Sub Worksheet_Change(ByVal Target As Range)
@@ -140,5 +167,6 @@ Application.EnableEvents = True
 Exitsub:
 Application.EnableEvents = True
 End Sub
+
 
 '- END -
