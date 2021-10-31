@@ -21,10 +21,12 @@ OBJECTIVE: REDUCE MANUAL ENTRY IN EXCEL VIA MACRO
   3. SOLUTION:
       Depending on the scenario, two types of macro-enabled excel file can be created.
       (1) Type: If the content you are reviewing would generally contain 1-3 types of errors, track errors per type. 
-                Scenario: You need to track two types of error, type A and B. 
-                Use guide: You track error type A and use Insert_Button(). Repeat the process to track the error type B. 
+                Scenario  : You need to track two types of error, type A and B for content 14##AB34aood.
+                Use guide : You track error type A and use Insert_Button(). Repeat the process to track the error type B. 
+                Results   : You will have two rows generated in Tracker worksheet, for type A and B.
       (2) Type: If the content you are reviewing would generally contain 3+ types of errors, track errors per content. 
-                Scenario: You need to track 4 types of error, type A, B, C and D.
-                Use guide: You track error type A, B, C, D and user Insert_Button().
+                Scenario  : You need to track 4 types of error, type A, B, C and D.
+                Use guide : You track error type A, B, C, D and user Insert_Button().
+                Results   : You will have four rows generated in Tracker worksheet, for type A, B, C and D.
 
 - END - 
