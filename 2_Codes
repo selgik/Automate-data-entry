@@ -1,27 +1,3 @@
-'------------------------------------------------
-'SUMMARY: REDUCE MANUAL ENTRY IN EXCEL VIA MACRO
-'------------------------------------------------
-
-'SCENARIO: You are working in a QA project. In order to track the error, you need to fill the excel spreadsheet with necessary information.
-'          Those necessary information includes but not limited to: extract of given web link, the error group, type, sub type and comment.
-'          Everyday, you need to clear the contents in the table and repeat the process.
-'WORKFLOW: (1) In the Entry_Form worksheet, you copy the web link, select error type from list and add comment.
-'          (2) You click Insert_Button() and entered data will be transffered to assigned cells in the Tracker worksheet.
-'          (3) You click Clear button() in Tracker worksheet which alert you before clearing contents in the defined cells.
-'SOLUTION: Depending on the scenario, two types of macro-enabled excel file can be created.
-'          (A) Type: if error type for given web link is generally within the range of 1-2. Track one error per link.
-'          (B) Type: if error type for given web link is more than 3+. Track multiple errors per link.
-
-
-'------------------------------------------------
-' PROBLEMATIC SCENARIO CASE STUDY
-'------------------------------------------------
-
-'QUESTION: When using (B) Type macro, how do I make sure that comment matches with certain type of error?
-'ANSWER  : Follow the exact order to match comment with error type as below:
-'          - Example: For error type "hamburger" only "coke" and "sprite" can come as matching comment.
-'          - When using Entry_Form, select error type in order: hamburger, dimsum, chicken and taco
-'          - Follow the comment order matched with error order: coke, tea, (blank) <--- if you want to skip comment
 
 '------------------------------------------------
 'IMPORTANT NOTE FOR FORMULA VBA: 
@@ -165,4 +141,4 @@ Exitsub:
 Application.EnableEvents = True
 End Sub
 
-' END !
+'- END -
