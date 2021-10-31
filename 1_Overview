@@ -2,7 +2,7 @@
 OBJECTIVE: REDUCE MANUAL ENTRY IN EXCEL VIA MACRO
 --------------------------------------------------
 
-  1. Background: 
+  1. BACKGROUND: 
       You are working in a QA project. You are reviewing contents that has an unique reference number. 
       If you notice an error, you track its reference number, categorize errors and leave comments in the spreadsheet.
       Once certain amounts of errors are captured, you clean the spreadsheet and repeat the process next day.
