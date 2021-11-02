@@ -1,0 +1,28 @@
+Data Entry Automation Project
+Date: Nov 3, 2021                                                                                        
+Data Analyst: Sylvia Kim
+Client/Sponsor: N/A
+
+
+1. Purpose: 
+The goal of this project is to minimize the repetitive process of data entry and human errors associated with it. This project will streamline extraction of string values and pulling out hierarchical values using data entry form in macro-enabled Excel spreadsheet. The final deliverable will reduce at least 50% of the steps involved in the data entry process.
+
+2. Scope / Major Project Activities:
+Activity                        Description
+Identify the process            Analyze current steps involved in the data entry process.
+Identify repetitive process     Analyze which steps require repetitive and manual data input that can be automated. 
+Design data flow                Design data flow. Build data entry form, final table and link with macros and functions. 
+                                This stage will require recording, editing or searching macros in VBA. 
+Deliver excel template          Deliver macro-enabled data entry template.
+
+3. This project does not include:
+Any administrative activity for Excel program, such as downloading or enabling Developer functionality to use macros.
+
+4. Deliverables:
+Deliverable                     Description/ Details
+Excel template                  A macro-enabled data entry template where unique reference ID, error type and comment is only 
+                                needed for entry. Final table will include extract of reference ID, error type/sub error type and 
+                                auto-counted error reports.
+
+5. Schedule Overview / Major Milestones:
+N/A
