@@ -20,7 +20,9 @@ FUNCTIONS AND FORMULAS USED
 
 2. To auto-populate corresponding error group/sub-group: 
     =VLOOKUP(TargetCell,ReferenceTableToSearh,2,FALSE)
-3. To highlight cell(s) and rows once certain amounts of errors are tracked: 
+3. To track the number of errors:
+    =COUNTIF(range,criteria)
+4. To highlight cell(s) and rows once certain amounts of errors are tracked: 
     Conditional formatting > New rule > Style: Classic > Use a formula to determine which cells to format
 
 VBA USED
