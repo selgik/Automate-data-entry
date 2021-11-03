@@ -23,7 +23,7 @@
                 Results   : You will have two rows generated in Tracker worksheet, for type A and B.
       (2) Type: If the content you are reviewing would generally contain 3+ types of errors, track errors per content. 
                 Scenario  : You need to track 4 types of error, type A, B, C and D.
-                Use guide : You track error type A, B, C, D and user Insert_Button().
+                Use guide : You track error type A, B, C, D and use Insert_Button().
                 Results   : You will have four rows generated in Tracker worksheet, for type A, B, C and D.
 
 - END - 
