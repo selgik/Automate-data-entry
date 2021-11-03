@@ -13,7 +13,7 @@ FUNCTIONS AND FORMULAS USED
     (2) A1      : Once full reference number is entered in Entry_Form worksheet it will be transffered to A1 in Tracker worksheet. 
                   This formula can be written in A2 while A1 is hidden, as we only need certain part of A1.
     (3) keyword : Enter keyword you want the extract to start. 
-                  Example: Reference number of content has repeated patterns starting with UID. Say, 123e5##UID99ab00s.
+                  Example: Reference ID of content has repeated patterns starting with UID. Say, 123e5##UID99ab00s.
                   And the part you need is UID99ab00s. "UID" will be your keyword.
     (4) #       : Start number
     (5) ##      : Number of characters
