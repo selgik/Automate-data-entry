@@ -36,9 +36,9 @@
          -> You enter 2.(2-1) data into macro-enabled data entry form. 
          -> Now 2.(2-1) data sits under the 2.(1)a
          -> You click insert button built within the macro-enabled data entry form.
-             -> Macro will trigger 2.(2-1) data to be transffered from 2.(1)a to 2.(2-2) table in 2.1(b).
-             -> By transffering, macro will feed data to 2.(2-2) table.
-                 -> Next set of 2.(2-1) will add record (moved to the next line of the row) within the 2.(2-2) table. 
+             -> Macro will trigger 2.(2-1) data to be transffered from 2.(1)a to 2.1(b).
+             -> By transffering, macro will feed 2.(2-1) data to 2.(2-2) table.
+                 -> Next set of 2.(2-1) data will add record (to the next line of the row). 
       
   4. DELIVABLES:
       Depending on the scenario, two types of macro-enabled excel spreadsheet can be created.
