@@ -1,0 +1,55 @@
+
+  1. BACKGROUND: 
+      You are working in a QA project as reviewer. You are reviewing contents* that has an unique reference ID**. 
+      If you notice an error in the content, you track its reference ID, categorize errors and leave comments in the spreadsheet.
+      Once target amounts of errors are captured, you clean the spreadsheet and repeat the process next day.
+     
+      * Contents here, mean any type of texst, photo, audio or video files. 
+      ** An example of Reference ID is 14##AB34aood.
+      
+  2. SCHEMA:
+      (1) Worksheet:
+          WORKSHEET NAME            DESCRIPTION 
+          a. entry_form_worksheet   Source worksheet where entry_form resides.    
+          b. tracker_worksheet      Target worksheet where tracker table resides.
+      
+          Tables:
+          (2-1) entry_form_worksheet.entry_form
+          FIELD/RECORD NAME         TYPE            MODE            DESCRIPTION
+          a. Reference ID#          STRING          Required        Web link, file address or content reference number that needed to be tracked.
+          b. Error                  STRING          Required        Error type selectable from the list (data validation inserted).
+          c. Comment                STRING          Nullable        Comments section with/without characters limitation.
+          
+          (2-2) tracker_worksheet.tracker
+          FIELD NAME                TYPE            MODE            DESCRIPTION
+          a. Date                   Date            Required        Display today's date via =TODAY()
+          b. Name                   STRING          Required        Reviewer's name. 
+          c. Core ID#               STRING          Required        Substring of 2.(2-1)a, manipulated via LEFT,RIGHT or MID.
+          d. Error                  STRING          Required        2.(2-1)b
+          e. Error group            STRING          Required        Hirarchial value of 2.(2-1)b, pulled out via VLOOKUP 
+          f. Error type             STRING          Required        Hirarchial value of 2.(2-1)b, pulled out via VLOOKUP  
+          g. Comment                STRING          Nullable        2.(2-1)c
+     
+  3. WORKFLOW:
+       You notice an error in the content. 
+         -> You need to track 2.(2-1) data. 
+         -> You enter 2.(2-1) data into macro-enabled data entry form. 
+         -> Now 2.(2-1) data sits under the 2.(1)a
+         -> You click insert button built within the macro-enabled data entry form.
+             -> Macro will trigger 2.(2-1) data to be transffered from 2.(1)a to 2.(2-2) table in 2.1(b).
+             -> By transffering, macro will feed data to 2.(2-2) table.
+                 -> Next set of 2.(2-1) will add record (moved to the next line of the row) within the 2.(2-2) table. 
+      
+  4. DELIVABLES:
+      Depending on the scenario, two types of macro-enabled excel spreadsheet can be created.
+      
+      (1) Type: If the content you are reviewing would generally contain 1-3 types of errors, track errors per error type. 
+                Scenario  : You need to track two types of error, type A and B for content 14##AB34aood.
+                Use guide : You track error type A and use Insert_Button(). Repeat the process to track the error type B. 
+                Results   : You will have two records generated in 2.(1)b, for error type A and B.
+      (2) Type: If the content you are reviewing would generally contain 3+ types of errors, track errors per content. 
+                Scenario  : You need to track 4 types of error, type A, B, C and D.
+                Use guide : You track error type A, B, C, D and use Insert_Button().
+                Results   : You will have four records generated in 2.(2)b, for type A, B, C and D.
+
+- END - 
