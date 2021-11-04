@@ -13,14 +13,13 @@
           a. entry_form_worksheet   Source worksheet where entry_form resides.    
           b. tracker_worksheet      Target worksheet where tracker table resides.
       
-          Tables:
-          (2-1) entry_form_worksheet.entry_form
+      (2-1) Table: entry_form_worksheet.entry_form
           FIELD/RECORD NAME         TYPE            MODE            DESCRIPTION
           a. Reference ID#          STRING          Required        Web link, file address or content reference number that needed to be tracked.
           b. Error                  STRING          Required        Error type selectable from the list (data validation inserted).
           c. Comment                STRING          Nullable        Comments section with/without characters limitation.
           
-          (2-2) tracker_worksheet.tracker
+      (2-2) Table: tracker_worksheet.tracker
           FIELD NAME                TYPE            MODE            DESCRIPTION
           a. Date                   Date            Required        Display today's date via =TODAY()
           b. Name                   STRING          Required        Reviewer's name. 
