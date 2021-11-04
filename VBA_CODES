@@ -1,8 +1,5 @@
 
 '------------------------------------------------
-'VBA CODES
-'------------------------------------------------
-
 ' #1. Insert_buttonA() 
 '   Reference: Excel_Macro_Practice/1_Overview - 2(3), 3(1) 
 '   Note     : Reversing the order in the code will break the data transfer process. Ex:
