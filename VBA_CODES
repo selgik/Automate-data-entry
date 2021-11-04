@@ -1,43 +1,4 @@
 
-------------------------------------------------
-IMPORTANT NOTE FOR FUNCTIONS, FORMULAS AND VBA 
-------------------------------------------------
-
-FUNCTIONS AND FORMULAS USED
-
-1. Extract certain part within string you enter in the Entry_Form worksheet. 
-    =MID (RIGHT(A1,LEN(A1)-FIND("keyword",A1)),#,##)
-    
-    (1) Formula : MID("text", start number, number of characters)
-                  Example: MID("apple", 2, 2) is pp.
-    (2) A1      : Once full reference number is entered in Entry_Form worksheet it will be transffered to A1 in Tracker worksheet. 
-                  This formula can be written in A2 while A1 is hidden, as we only need certain part of A1.
-    (3) keyword : Enter keyword you want the extract to start. 
-                  Example: Reference ID of content has repeated patterns starting with UID. Say, 123e5##UID99ab00s.
-                  And the part you need is UID99ab00s. "UID" will be your keyword.
-    (4) #       : Start number
-    (5) ##      : Number of characters
-
-2. To auto-populate corresponding error group/sub-group: 
-    =VLOOKUP(TargetCell,ReferenceTableToSearh,2,FALSE)
-3. To track the number of errors:
-    =COUNTIF(range,criteria)
-4. To highlight cell(s) and rows once certain amounts of errors are tracked: 
-    Conditional formatting > New rule > Style: Classic > Use a formula to determine which cells to format
-
-VBA USED
-
-1. Cells(x, y) indicates Cells(row#, column#). 
-    Ex: row 3 coulmn C = Cells(3, 3) 
-2. VBA to stop macro when/if cell is empty: 
-    If ActiveSheet.Range("A1").Value = "" Then Exit Sub 
-3. Tips:
-    To add certain VBA as sub query, simply add code name without () 
-    Put the sub code in the right position, otherwise it won't work as expected.
-
-
-*** In order to differenciate between VBA codes vs notes, notes will be indicated with back tick ' mark below.
-
 '------------------------------------------------
 'VBA CODES
 '------------------------------------------------
