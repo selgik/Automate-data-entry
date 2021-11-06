@@ -62,6 +62,6 @@ TABLE OF CONTENTS:
       (2) Type: If the content you are reviewing would generally contain 3+ types of errors, track errors per content. 
                 Scenario  : You need to track 4 types of error, type A, B, C and D.
                 Use guide : You track error type A, B, C, D and use Insert_Button().
-                Results   : You will have four records generated in 2.(2)b, for type A, B, C and D.
+                Results   : You will have four records generated in 2.(1)b, for type A, B, C and D.
 
 - END - 
