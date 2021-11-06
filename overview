@@ -1,19 +1,34 @@
 TABLE OF CONTENTS:
-1. DESCRIPTION
-2. SCHEMA
-3. WORKFLOW
-4. DELIVABLES
+  1. DESCRIPTION
+  2. WORKFLOW
+  3. SCHEMA
+  4. DELIVABLES
 
 
   1. DESCRIPTION: 
-      You are working in a QA project as reviewer. You are reviewing contents* that has an unique reference ID**. 
+      You are working in a QA project as a reviewer. You are checking contents* that has an unique reference ID**. 
       If you notice an error in the content, you track its reference ID, categorize errors and leave comments in the spreadsheet.
+      If you do not notice any error in the content, you do not have to track anything in the spreadsheet.
       Once target amounts of errors are captured, you clean the spreadsheet and repeat the process next day.
      
-      * Contents here, mean any type of texst, photo, audio or video files. 
-      ** An example of Reference ID is 14##AB34aood.
-      
-  2. SCHEMA:
+      * Contents reference any type of texst, photo, audio or video files. 
+      ** An example of Reference ID is 14##AB34aood. 
+
+  2. WORKFLOW:
+     (1) You notice an error in the content. 
+         You need to track reference ID, error types and comments for the content ("error data"). 
+         --> (2) You enter error data into macro-enabled data entry form ("entry_form"). 
+                 Currently error data sits under the spreadsheet ("entry_form_worksheet") containing entry_form. 
+                 You click insert button of the entry_form.
+                 --> (3) entry_form will trigger error data to be transffered from entry_form_worksheet to
+                         the linked worksheet ("tracker_worksheet") containing tracking table ("tracker_table").
+                         By transffering, macro will feed error data to targeted cells in the tracker_table.
+                         Once transffered, macro will erase the entered data from the entry_form.
+                         --> (4) Error types will be counted and highlighted with color once erorr types hits targeted number.
+                                 --> (5) Next set of error data will add record (to the next line of the row). 
+                                         Process (1)-(4) will be repeated. 
+                 
+  3. SCHEMA:
       (1) Worksheet:
           WORKSHEET NAME            DESCRIPTION 
           a. entry_form_worksheet   Source worksheet where entry_form resides.    
@@ -25,7 +40,7 @@ TABLE OF CONTENTS:
           b. Error                  STRING          Required        Error type selectable from the list (data validation inserted).
           c. Comment                STRING          Nullable        Comments section with/without characters limitation.
           
-      (2-2) Table: tracker_worksheet.tracker
+      (2-2) Table: tracker_worksheet.tracker_table
           FIELD NAME                TYPE            MODE            DESCRIPTION
           a. Date                   Date            Required        Display today's date via =TODAY()
           b. Name                   STRING          Required        Reviewer's name. 
@@ -35,15 +50,6 @@ TABLE OF CONTENTS:
           f. Error type             STRING          Required        Hirarchial value of 2.(2-1)b, pulled out via VLOOKUP  
           g. Comment                STRING          Nullable        2.(2-1)c
      
-  3. WORKFLOW:
-       You notice an error in the content. 
-         -> You need to track 2.(2-1) data. 
-         -> You enter 2.(2-1) data into macro-enabled data entry form. 
-         -> Now 2.(2-1) data sits under the 2.(1)a
-         -> You click insert button built within the macro-enabled data entry form.
-             -> Macro will trigger 2.(2-1) data to be transffered from 2.(1)a to 2.1(b).
-             -> By transffering, macro will feed 2.(2-1) data to 2.(2-2) table.
-                 -> Next set of 2.(2-1) data will add record (to the next line of the row). 
       
   4. DELIVABLES:
       Depending on the scenario, two types of macro-enabled excel spreadsheet can be created.
