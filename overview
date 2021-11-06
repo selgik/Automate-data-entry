@@ -1,5 +1,5 @@
 
-  1. BACKGROUND: 
+  1. CASE STUDY: 
       You are working in a QA project as reviewer. You are reviewing contents* that has an unique reference ID**. 
       If you notice an error in the content, you track its reference ID, categorize errors and leave comments in the spreadsheet.
       Once target amounts of errors are captured, you clean the spreadsheet and repeat the process next day.
