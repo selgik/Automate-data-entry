@@ -21,8 +21,8 @@ TABLE OF CONTENTS:
          --> (2) You enter error data into macro-enabled data entry form ("entry_form"). 
                  Currently error data sits under the spreadsheet ("entry_form_worksheet") containing entry_form. 
                  You click insert button of the entry_form. 
-                 --> (3) Clicking insert button will trigger error data to be transffered from entry_form_worksheet to
-                         the linked worksheet ("tracker_worksheet") containing tracking table ("tracker_table").
+                 --> (3) Clicking insert button will trigger error data to be transffered from entry_form_worksheet to the linked worksheet ("tracker_worksheet"). 
+                         Tracker_worksheet contains tracking table ("tracker_table").
                          By transffering, macro will feed error data to targeted cells in the tracker_table.
                          Once transffered, macro will erase the entered data from the entry_form.
                          --> (4) Upon the transfer, error types will be counted in the table ("count_table") next to entry_form in entry_form_worksheet.
