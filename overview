@@ -20,13 +20,16 @@ TABLE OF CONTENTS:
          You need to track reference ID, error types and comments for the content ("error data"). 
          --> (2) You enter error data into macro-enabled data entry form ("entry_form"). 
                  Currently error data sits under the spreadsheet ("entry_form_worksheet") containing entry_form. 
-                 You click insert button of the entry_form.
-                 --> (3) entry_form will trigger error data to be transffered from entry_form_worksheet to
+                 You click insert button of the entry_form. 
+                 --> (3) Clicking insert button will trigger error data to be transffered from entry_form_worksheet to
                          the linked worksheet ("tracker_worksheet") containing tracking table ("tracker_table").
                          By transffering, macro will feed error data to targeted cells in the tracker_table.
                          Once transffered, macro will erase the entered data from the entry_form.
-                         --> (4) Error types will be counted and highlighted in table ("count_table") once it hits the targeted number.
-                                 --> (5) Next set of error data will add record (to the next line of the row). 
+                         --> (4) Upon the transfer, error types will be counted in the table ("count_table") next to entry_form in entry_form_worksheet.
+                                 counter_table use COUNTIF range from tracker_table. 
+                                 Once the erorr types hit targeted number, error types cell and/or row will be highlighted. 
+                                 Reviewer can stop tracking highlighted error type. 
+                                 --> (5) Next set of error data will trigger adding next record (to the next line of the row) in the tracker_table. 
                                          Process (1)-(4) will be repeated. 
                  
   3. SCHEMA:
@@ -41,7 +44,8 @@ TABLE OF CONTENTS:
           b. Error                  STRING          Required        Error type selectable from the list (data validation inserted).
           c. Comment                STRING          Nullable        Comments section with/without characters limitation.
       
-      (2-2) Table: 
+      (2-2) Table: entry_form_worksheet.count_table
+      
       (2-3) Table: tracker_worksheet.tracker_table
           FIELD NAME                TYPE            MODE            DESCRIPTION
           a. Date                   Date            Required        Display today's date via =TODAY()
