@@ -25,7 +25,7 @@ TABLE OF CONTENTS:
                          the linked worksheet ("tracker_worksheet") containing tracking table ("tracker_table").
                          By transffering, macro will feed error data to targeted cells in the tracker_table.
                          Once transffered, macro will erase the entered data from the entry_form.
-                         --> (4) Error types will be counted and highlighted with color once erorr types hits targeted number.
+                         --> (4) Error types will be counted and highlighted in table ("count_table") once it hits the targeted number.
                                  --> (5) Next set of error data will add record (to the next line of the row). 
                                          Process (1)-(4) will be repeated. 
                  
@@ -40,8 +40,9 @@ TABLE OF CONTENTS:
           a. Reference ID#          STRING          Required        Web link, file address or content reference number that needed to be tracked.
           b. Error                  STRING          Required        Error type selectable from the list (data validation inserted).
           c. Comment                STRING          Nullable        Comments section with/without characters limitation.
-          
-      (2-2) Table: tracker_worksheet.tracker_table
+      
+      (2-2) Table: 
+      (2-3) Table: tracker_worksheet.tracker_table
           FIELD NAME                TYPE            MODE            DESCRIPTION
           a. Date                   Date            Required        Display today's date via =TODAY()
           b. Name                   STRING          Required        Reviewer's name. 
