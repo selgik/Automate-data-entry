@@ -69,7 +69,7 @@
         b. Count                 INTEGER          Required        Starts from 0. COUNTIF Formula used, conditional fomatting applied.
 
    
-### 4. How does the final deliverable look?
+### 4. How does the final deliverable look like?
        Depending on the scenario, two types of macro-enabled excel spreadsheet can be created.
       
        (1) Type: If the content you are reviewing would generally contain 1-3 types of errors, track errors per error type. 
