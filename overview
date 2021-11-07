@@ -43,9 +43,7 @@ TABLE OF CONTENTS:
           a. Reference ID#          STRING          Required        Web link, file address or content reference number that needed to be tracked.
           b. Error                  STRING          Required        Error type selectable from the list (data validation inserted).
           c. Comment                STRING          Nullable        Comments section with/without characters limitation.
-      
-      (2-2) Table: entry_form_worksheet.count_table
-      
+            
       (2-3) Table: tracker_worksheet.tracker_table
           FIELD NAME                TYPE            MODE            DESCRIPTION
           a. Date                   Date            Required        Display today's date via =TODAY()
@@ -56,7 +54,8 @@ TABLE OF CONTENTS:
           f. Error type             STRING          Required        Hirarchial value of 2.(2-1)b, pulled out via VLOOKUP  
           g. Comment                STRING          Nullable        2.(2-1)c
      
-      
+      (2-4) Table: entry_form_worksheet.count_table
+
   4. DELIVABLES:
       Depending on the scenario, two types of macro-enabled excel spreadsheet can be created.
       
