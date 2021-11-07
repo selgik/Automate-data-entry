@@ -7,18 +7,19 @@ TABLE OF CONTENTS:
 --------------------------
 
   1. MOTIVATION
-      You are working in a QA project as a reviewer. You are checking contents* that has an unique reference ID**.
-      If you notice an error in the content, you track its reference ID, categorize errors and leave comments in the spreadsheet.
-          a. The problem is, current spreadsheet forces me to choose 3 types of hirarchiar errors manually.
-             Also, I need to copy and paste the reference ID somewhere else and just track the track the certain part of it.
-             Due to its manual and repetitive nature, I waste time and make mistakes.
-          b. Once target amounts of errors are captured, you clean the spreadsheet and repeat the process next day.
-             The difficulty is, I need to manually count the various types of error and I sometimes lose the track of it.
-             Also, I need to copy and paste the table template every day. Otherwise, I drag the table and clear contents manually.
-      I want to automate manual and repetitive process to reduce time and errors.
+     You are working in a QA project as a reviewer. You are checking contents* that has an unique reference ID**.
+     If you notice an error in the content, you track its reference ID, categorize errors and leave comments in the spreadsheet.
+        a. The problem is, current spreadsheet forces me to choose 3 types of hirarchiar errors manually.
+           Also, I need to copy and paste the reference ID somewhere else and just track the track the certain part of it.
+           Due to its manual and repetitive nature, I waste time and make mistakes.
+        b. Once target amounts of errors are captured, you clean the spreadsheet and repeat the process next day.
+           The difficulty is, I need to manually count the various types of error and I sometimes lose the track of it.
+           Also, I need to copy and paste the table template every day. Otherwise, I drag the table and clear contents manually.
+     I want to automate manual and repetitive process to reduce time and errors.
+     I anticipate the macro-enabled spreadsheet will at least reduce 50% of steps invovled in the tracking process.
      
-      * Contents refer to any type of texst, photo, audio or video files. 
-      ** An example of Reference ID can be "https://sample.address.com/sample1/error123/phototype121" or "14##AB34aood". 
+     * Contents refer to any type of texst, photo, audio or video files. 
+     ** An example of Reference ID can be "https://sample.address.com/sample1/error123/phototype121" or "14##AB34aood". 
 
   2. PREPARATION:
      (1) You notice an error in the content. 
