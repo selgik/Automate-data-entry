@@ -1,18 +1,22 @@
 # Automate data entry process with macro-enabled spreadsheet
-### Click report to view:
+### Table of contents: report
     1. Why should I automate a data entry process? 
     2. What do I want to automate? 
     3. How does the schema look like?
     4. How does the final deliverables look like? 
 
-### Click scope of work to view:
+### Table of Contents: scope of work
     1. Purpose
     2. Scope / Major Project Activities
     3. This project does not include
     4. Deliverables:
 
-### Click VBA CODES to view:
-    VBA codes
+### VBA CODES:
+    1. Insert_buttonA() 
+    2. Insert_buttonB() 
+    3. Clear_button()
+    4. Split()
+    5. MultipleSelection()
     
 -- END -- 
 <!--
