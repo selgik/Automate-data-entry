@@ -5,7 +5,7 @@
     3. How does the schema look like?
     4. How does the final deliverables look like? 
 
-### Table of Contents: scope of work
+### Table of contents: scope of work
     1. Purpose
     2. Scope / Major Project Activities
     3. This project does not include
