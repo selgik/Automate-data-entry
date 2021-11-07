@@ -25,7 +25,7 @@
     * Contents refer to any type of texst, photo, audio or video files. 
     ** An example of reference ID can be "https://sample.address.com/sample1/error123/phototype121" or "14##AB34aood". 
 
-### 2. WHAT DO I WANT TO AUTOMATE?
+### 2. What do I want to automate?
     (1) I notice an error in the content. 
         I need to track reference ID, error types and comments for the content ("error data"). 
         --> (2) I enter error data into macro-enabled data entry form ("entry_form"). 
@@ -42,7 +42,7 @@
                                 --> (5) Next set of error data will trigger adding next record (to the next line of the row) in the tracker_table. 
                                         Process (1)-(4) will be repeated. 
                  
-### 3. HOW DOES THE SCHEMA LOOK LIKE?
+### 3. How does the schema look like?
     (1) Worksheet:
         WORKSHEET NAME            DESCRIPTION 
         a. entry_form_worksheet   Source worksheet where entry_form and count_table resides.    
@@ -70,7 +70,7 @@
         b. Count                 INTEGER          Required        Starts from 0. COUNTIF Formula used, conditional fomatting applied.
 
    
-### 4. HOW DOES THE FINAL DELIVABLES LOOK LIKE?
+### 4. How does the final deliverable look?
        Depending on the scenario, two types of macro-enabled excel spreadsheet can be created.
       
        (1) Type: If the content you are reviewing would generally contain 1-3 types of errors, track errors per error type. 
@@ -82,7 +82,7 @@
                  Use guide : You track error type A, B, C, D and use Insert_Button().
                  Results   : You will have four records generated in 2.(1)b, for type A, B, C and D.
 
-- END - 
+-- END -- 
 
 <!---
 - Summary: Macro-enabled data entry form to simplify tracking process.
