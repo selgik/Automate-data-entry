@@ -1,31 +1,39 @@
--------------------------
+--------------------------
 TABLE OF CONTENTS:
-  1. DESCRIPTION
-  2. WORKFLOW
-  3. SCHEMA
-  4. DELIVABLES
--------------------------
+  1. MOTIVATION
+  2. PREPARATION
+  3. BUILDING SCHEMA
+  4. FINAL DELIVABLES
+--------------------------
 
-  1. DESCRIPTION: 
-      You are working in a QA project as a reviewer. You are checking contents* that has an unique reference ID**. 
+  1. MOTIVATION
+      You are working in a QA project as a reviewer. You are checking contents* that has an unique reference ID**.
       If you notice an error in the content, you track its reference ID, categorize errors and leave comments in the spreadsheet.
-      If you do not notice any error in the content, you do not have to track anything in the spreadsheet.
-      Once target amounts of errors are captured, you clean the spreadsheet and repeat the process next day.
+      
+      a. The problem is, current spreadsheet forces me to choose 3 types of hirarchiar errors manually.
+         Also, I need to copy and paste the reference ID somewhere else and just track the track the certain part of it.
+         Due to its manual and repetitive nature, I waste time and make mistakes.
+  
+      b. Once target amounts of errors are captured, you clean the spreadsheet and repeat the process next day.
+         The difficulty is, I need to manually count the various types of error and I sometimes lose the track of it.
+         Also, I need to copy and paste the table template every day. Otherwise, I drag the table and clear contents manually.
+      
+      I want to automate manual and repetitive process to reduce time and errors.
      
-      * Contents reference any type of texst, photo, audio or video files. 
-      ** An example of Reference ID is 14##AB34aood. 
+      * Contents refer to any type of texst, photo, audio or video files. 
+      ** An example of Reference ID can be "https://sample.address.com/sample1/error123/phototype121" or "14##AB34aood". 
 
-  2. WORKFLOW:
+  2. PREPARATION:
      (1) You notice an error in the content. 
          You need to track reference ID, error types and comments for the content ("error data"). 
          --> (2) You enter error data into macro-enabled data entry form ("entry_form"). 
-                 Currently error data sits under the spreadsheet ("entry_form_worksheet") containing entry_form. 
-                 You click insert button of the entry_form. 
-                 --> (3) Clicking insert button will trigger error data to be transffered from entry_form_worksheet to the linked worksheet ("tracker_worksheet"). 
+                 Currently error data sits under the spreadsheet1 ("entry_form_worksheet") containing entry_form. 
+                 You click insert button built in the entry_form. 
+                 --> (3) Clicking insert button will trigger error data to be transffered from entry_form_worksheet to the linked worksheet2 ("tracker_worksheet"). 
                          Tracker_worksheet contains tracking table ("tracker_table").
                          By transffering, macro will feed error data to targeted cells in the tracker_table.
                          Once transffered, macro will erase the entered data from the entry_form.
-                         --> (4) Upon the transfer, error types will be counted in the table ("count_table") next to entry_form in entry_form_worksheet.
+                         --> (4) Upon the transfer, error types will be counted in the table ("count_table") next to the entry_form in entry_form_worksheet.
                                  counter_table use COUNTIF range from tracker_table. 
                                  Once the erorr types hit targeted number, error types cell and/or row will be highlighted. 
                                  Reviewer can stop tracking highlighted error type. 
@@ -35,13 +43,13 @@ TABLE OF CONTENTS:
   3. SCHEMA:
       (1) Worksheet:
           WORKSHEET NAME            DESCRIPTION 
-          a. entry_form_worksheet   Source worksheet where entry_form resides.    
+          a. entry_form_worksheet   Source worksheet where entry_form and count_table resides.    
           b. tracker_worksheet      Target worksheet where tracker table resides.
       
       (2-1) Table: entry_form_worksheet.entry_form
           FIELD/RECORD NAME         TYPE            MODE            DESCRIPTION
-          a. Reference ID#          STRING          Required        Web link, file address or content reference number that needed to be tracked.
-          b. Error                  STRING          Required        Error type selectable from the list (data validation inserted).
+          a. Reference ID#          STRING          Required        Web link, file address or content reference number that needs to be tracked.
+          b. Error                  STRING          Required        Error type that is selectable from the list (data validation inserted).
           c. Comment                STRING          Nullable        Comments section with/without characters limitation.
             
       (2-3) Table: tracker_worksheet.tracker_table
@@ -55,8 +63,11 @@ TABLE OF CONTENTS:
           g. Comment                STRING          Nullable        2.(2-1)c
      
       (2-4) Table: entry_form_worksheet.count_table
+          FIELD/RECORD NAME         TYPE            MODE            DESCRIPTION
+          a. Error                 STRING           Required        2.(2-1)b. Optionally, Error group/type can come together.
+          b. Count                 INTEGER          Required        Starts from 0. COUNTIF Formula used, conditional fomatting applied.
 
-  4. DELIVABLES:
+4. DELIVABLES:
       Depending on the scenario, two types of macro-enabled excel spreadsheet can be created.
       
       (1) Type: If the content you are reviewing would generally contain 1-3 types of errors, track errors per error type. 
