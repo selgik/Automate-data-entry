@@ -18,7 +18,7 @@
     1. Purpose
     2. Scope / Major Project Activities
     3. This project does not include
-    4. Deliverables:
+    4. Deliverables
 
 
 <!--
