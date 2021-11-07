@@ -7,23 +7,23 @@ TABLE OF CONTENTS:
 -----------------------------------------------------
 
   1. WHY SHOULD I AUTOMATE A DATA ENTRY PROCESS? 
-    Task:
-    I am working in a QA project as a reviewer. I am checking contents* that has an unique reference ID**.
-    If I notice an error in the content, I track its reference ID, categorize errors and leave comments in the spreadsheet.
-    Once target amounts of errors are captured, I clean the spreadsheet and repeat the process next day.
+     (1) Task:
+         I am working in a QA project as a reviewer. I am checking contents* that has an unique reference ID**.
+         If I notice an error in the content, I track its reference ID, categorize errors and leave comments in the spreadsheet.
+         Once target amounts of errors are captured, I clean the spreadsheet and repeat the process next day.
 
-    Problem:
-    a. I need to choose 3 types of hirarchiar errors from the list manually.
-    b. I need to copy and paste the reference ID somewhere else and just track the certain part of it.
-    c. I need to manually count the various types of error and I easily lose a track of it.
-    d. I need to copy and paste the table template every day. Or, I drag the table and clear contents manually.
+     (2) Problem:
+         a. I need to choose 3 types of hirarchiar errors from the list manually.
+         b. I need to copy and paste the reference ID somewhere else and just track the certain part of it.
+         c. I need to manually count the various types of error and I easily lose a track of it.
+         d. I need to copy and paste the table template every day. Or, I drag the table and clear contents manually.
 
-    Motivation:
-    I want to automate manual and repetitive process to reduce time and errors.
-    I anticipate the macro-enabled spreadsheet will at least reduce 50% of steps invovled in the tracking process.
+     (3) Motivation:
+         I want to automate manual and repetitive process to reduce time and errors.
+         I anticipate the macro-enabled spreadsheet will at least reduce 50% of steps invovled in the tracking process.
  
-    * Contents refer to any type of texst, photo, audio or video files. 
-    ** An example of reference ID can be "https://sample.address.com/sample1/error123/phototype121" or "14##AB34aood". 
+         * Contents refer to any type of texst, photo, audio or video files. 
+         ** An example of reference ID can be "https://sample.address.com/sample1/error123/phototype121" or "14##AB34aood". 
 
 
   2. WHAT DO I WANT TO AUTOMATE?
