@@ -1,5 +1,12 @@
 # Automate data entry process with macro-enabled spreadsheet
-### Explanatory Documents:
+## VBA CODES contains:
+    1. Insert_buttonA() 
+    2. Insert_buttonB() 
+    3. Clear_button()
+    4. Split()
+    5. MultipleSelection()
+
+## Explanatory Documents:
 ### Type 1: report
 
     1. Why should I automate a data entry process? 
@@ -12,13 +19,6 @@
     2. Scope / Major Project Activities
     3. This project does not include
     4. Deliverables:
-
-### Notes: VBA CODES
-    1. Insert_buttonA() 
-    2. Insert_buttonB() 
-    3. Clear_button()
-    4. Split()
-    5. MultipleSelection()
 
 
 <!--
