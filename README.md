@@ -10,7 +10,7 @@
 ### Type 1: report
 
     1. Why should I automate a data entry process? 
-    2. What do I want to automate? 
+    2. How can I streamline?
     3. How does the schema look like?
     4. How does the final deliverables look like? 
 
