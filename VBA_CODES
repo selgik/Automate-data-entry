@@ -81,7 +81,7 @@ End Sub
 '------------------------------------------------
 ' #4. MultipleSelection()
 '     Note   : This is required for using Type 4(2) macro mentioned in the report. 
-               To allow multiple selections in a Drop Down List in Excel (without repetition)
+'              To allow multiple selections in a Drop Down List in Excel (without repetition)
 '     Credit : https://trumpexcel.com/select-multiple-items-drop-down-list-excel/
       
       
