@@ -17,7 +17,7 @@ Design data flow                Design data flow. Build data entry form, final t
 Deliver excel template          Deliver macro-enabled data entry template.
 
 3. This project does not include:
-Any administrative activity for Excel program, such as downloading or enabling Developer functionality to use macros.
+Any other coding language that can be utilized in different platform other than Excel. 
 
 4. Deliverables:
 Deliverable                     Description/ Details
