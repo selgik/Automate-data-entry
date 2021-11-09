@@ -1,83 +1,71 @@
+'-------------------------------------------------------------------------------------------------
+' GENERAL NOTE
+' Back tick ' in front indicate it is a note. No back tick means VBA code. 
+' Cells(x, y) in VBA indicates Cells(row#, column#). Ex: Cell D3 = Cells(3, 4) 
+' To add VBA as sub query, add code name without () in right position. See example under #2 below. 
+'-------------------------------------------------------------------------------------------------
 
-'------------------------------------------------
+
 ' #1. Insert_buttonA() 
-'   Reference: Excel_Macro_Practice/1_Overview - 2(3), 3(1) 
-'   Note     : Reversing the order in the code will break the data transfer process. Ex:
-'              OK: Worksheets("Tracker").Cells(a, 4) = Worksheets("Entry_Form").Cells(2, 7)
-'              Not OK: Worksheets("Entry_Form").Cells(2, 7) = Worksheets("Tracker").Cells(a, 4)
+'     Note: This is Type 4(1) macro mentioned in the report. 
 
 Sub Insert_buttonA()
 
 Dim a As Integer
+a = Worksheets("tracker_worksheet").Cells(1, 9).Value
+'Number 4 put in I1. This number will increase by +1 upon adding record in tracker_table
 
-a = Worksheets("Tracker").Cells(1, 9).Value
+Worksheets("tracker_worksheet").Cells(a, 4) = Worksheets("entry_form_worksheet").Cells(2, 7)
+Worksheets("tracker_worksheet").Cells(a, 7) = Worksheets("entry_form_worksheet").Cells(3, 7)
+Worksheets("tracker_worksheet").Cells(a, 9) = Worksheets("entry_form_worksheet").Cells(4, 7)
+'Add as much needed. Currently, reference ID, error type and comment need to be tracked. Hence 3 lines.
 
-Worksheets("Tracker").Cells(a, 4) = Worksheets("Entry_Form").Cells(2, 7)
-Worksheets("Tracker").Cells(a, 7) = Worksheets("Entry_Form").Cells(3, 7)
-Worksheets("Tracker").Cells(a, 9) = Worksheets("Entry_Form").Cells(4, 7)
-Worksheets("Tracker").Cells(a, 8) = Worksheets("Entry_Form").Cells(5, 7)
-
-Worksheets("Entry_Form").Range("Cell1:Cell2").ClearContents
+Worksheets("entry_form_worksheet").Range("x:y").ClearContents
+'x, y refers to Cell where error data is being input.
 
 End Sub
 
-'------------------------------------------------
+
+'-------------------------------------------------------------------------------------------------
 ' #2. Insert_buttonB() 
-'   Reference: Excel_Macro_Practice/1_Overview - 2(3), 3(2) 
-'   Note     : By using SplitMacro, selected items from the list will auto-assign to one and each cells. See #4.
-'              After 'transffering' items, Dup_Insert will move items left over as result of SplitMacro.
+'     Note: This is Type 4(2) macro mentioned in the report. 
+'           By using SplitMacro, selected items from the list will auto-assign to one and each cells. See #4.
+'           After transffering items, Dup_Insert will move items left over as result of SplitMacro.
 
 Sub Insert_buttonB()
 
 Dim a As Integer
 
-a = Worksheets("Tracker").Cells(x,y).Value
+a = Worksheets("tracker_worksheet").Cells(x,y).Value
 'where count number will be sitted
 
-    '1. Do a split first
-    SplitMacro1
-    SplitMacro2
+'1. Do a split first
+SplitMacro1 '<-- splitting selected error types 
+SplitMacro2 '<-- splitting added comments per types
     
-Worksheets("Tracker").Cells(a, y) = Worksheets("Entry_Form").Cells(x, y6)
-Worksheets("Tracker").Cells(a, y3) = Worksheets("Entry_Form").Cells(x2, y6)
-Worksheets("Tracker").Cells(a, y4) = Worksheets("Entry_Form").Cells(x3, y6)
-Worksheets("Tracker").Cells(a, y5) = Worksheets("Entry_Form").Cells(x4, y6)
+'2. Insert 1st splitted item 
+Worksheets("tracker_worksheet").Cells(a, y) = Worksheets("entry_form_worksheet").Cells(x, y6)
+Worksheets("tracker_worksheet").Cells(a, y3) = Worksheets("entry_form_worksheet").Cells(x2, y6)
+Worksheets("tracker_worksheet").Cells(a, y4) = Worksheets("entry_form_worksheet").Cells(x3, y6)
 
-    '2. For splitted item: repeat as much as needed
-    Dup_Insert2
-    Dup_Insert3
+'3. Repeat insert for rest items
+Dup_Insert2 
+Dup_Insert3
+Dup_Insert4
    
-Worksheets("Entry_Form").Range("Cell:Cell2").ClearContents
-
+Worksheets("entry_form_worksheet").Range("x:y").ClearContents
 End Sub
 
 
 '------------------------------------------------
-' #3. Clear_button()
-'   Reference: Excel_Macro_Practice/1_Overview - 3(2)
-
-
-Sub Clear_button()
-
-CarryOn = MsgBox("Are you sure to clear them all?", vbYesNo, "ALERT")
-If CarryOn = vbYes Then
-
-Worksheets("Tracker").Range("range1, range2").ClearContents
-
-End If
-End Sub
-
-
-'------------------------------------------------
-' #4. Split()
-'   Reference: Excel_Macro_Practice/1_Overview - 3(2) 
-'   NOTE     : You may or may not have to select multiple error types. Similarly hence Split may or may not take. 
-'              Without 'If Activesheet.Ragne("").Value="" Then Exit Sub', macro will break when cell is blank.
-'              Record macro to obtain this code: Data > Text To Columns > Delimited > commas.
+' #3. Split()
+'     NOTE: This is required for using Type 4(2) macro mentioned in the report. 
+'           Macro recorded by going through Data > Text To Columns > Delimited > commas
 
 Sub Split()
 
 If ActiveSheet.Range("A1").Value = "" Then Exit Sub
+'Stop macro when/if cell is empty
 
     Range("A1").Select
     Selection.TextToColumns Destination:=Range("A1"), DataType:=xlDelimited, _
@@ -89,12 +77,14 @@ If ActiveSheet.Range("A1").Value = "" Then Exit Sub
         
 End Sub
 
-'------------------------------------------------
-' #5. MultipleSelection()
-'   Reference: Excel_Macro_Practice/1_Overview - 3(2)
-'   Credit   : https://trumpexcel.com/select-multiple-items-drop-down-list-excel/
-'              To allow multiple selections in a Drop Down List in Excel (without repetition)
 
+'------------------------------------------------
+' #4. MultipleSelection()
+'     Note   : This is required for using Type 4(2) macro mentioned in the report. 
+               To allow multiple selections in a Drop Down List in Excel (without repetition)
+'     Credit : https://trumpexcel.com/select-multiple-items-drop-down-list-excel/
+      
+      
 Private Sub Worksheet_Change(ByVal Target As Range)
 
 Dim Oldvalue As String
@@ -123,6 +113,20 @@ End If
 Application.EnableEvents = True
 Exitsub:
 Application.EnableEvents = True
+End Sub
+
+
+'-------------------------------------------------------------------------------------------------
+' #5. Clear_button()
+
+Sub Clear_button()
+
+CarryOn = MsgBox("Are you sure to clear them all?", vbYesNo, "ALERT")
+If CarryOn = vbYes Then
+
+Worksheets("tracker_worksheet").Range("range1, range2").ClearContents
+
+End If
 End Sub
 
 
