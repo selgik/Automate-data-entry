@@ -2,9 +2,9 @@
 ## VBA CODES contains:
     1. Insert_buttonA() 
     2. Insert_buttonB() 
-    3. Clear_button()
-    4. Split()
-    5. MultipleSelection()
+    3. Split()
+    4. MultipleSelection()
+    5. Clear_button()
 
 ## Explanatory Documents:
 ### Type 1: report
