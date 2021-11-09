@@ -22,8 +22,8 @@ Any other coding language that can be utilized in different platform other than 
 4. Deliverables:
 Deliverable                     Description/ Details
 Excel template                  A macro-enabled data entry template where unique reference ID, error type and comment is only 
-                                required for data entry. Final table will include extract of reference ID, error type/sub error
-                                type associated and auto-counted error reports.
+                                required for data entry. Final table will include extract of reference ID, associated error type 
+                                such as error group or sub error type and auto-counted error reports.
 
 5. Schedule Overview / Major Milestones:
 N/A
