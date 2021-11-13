@@ -7,19 +7,19 @@
     5. Clear_button()
 
 ## Explanatory Documents:
-### Type 1: report
+### Type 1: scope of work
 
-    1. Why should I automate a data entry process? 
-    2. How can I streamline?
-    3. How does the schema look like?
-    4. How does the final deliverables look like? 
-
-### Type 2: scope of work
     1. Purpose
     2. Scope / Major Project Activities
     3. This project does not include
     4. Deliverables
 
+### Type 2: report
+
+    1. Why should I automate data entry process? 
+    2. How can I streamline the process?
+    3. How does the schema look like?
+    4. How does the final deliverable look like? 
 
 <!--
 - Summary: Macro-enabled data entry form to simplify tracking process.
