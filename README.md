@@ -1,5 +1,5 @@
 # Automate data entry process with macro-enabled spreadsheet
-## VBA CODES contains:
+## VBA CODES:
     1. Insert_buttonA() 
     2. Insert_buttonB() 
     3. Split()
