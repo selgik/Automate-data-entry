@@ -16,10 +16,10 @@
 
 ### Type 2: report
 
-    1. Why should I automate data entry process? 
-    2. How can I streamline the process?
-    3. How does the schema look like?
-    4. How does the final deliverable look like? 
+    1. Motivation
+    2. Process Design
+    3. Building Schema
+    4. Final Delivables
 
 <!--
 - Summary: Macro-enabled data entry form to simplify tracking process.
