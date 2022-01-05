@@ -130,4 +130,15 @@ End If
 End Sub
 
 
+'-------------------------------------------------------------------------------------------------
+' #5. If cell is empty, alert and stop
+
+If IsEmpty(Range) = False Then
+     'execute code
+Else
+    MsgBox "Cell is empty"
+End If
+End Sub
+
+
 '- END -
