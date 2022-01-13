@@ -1,4 +1,16 @@
-# Automate data entry process with macro-enabled spreadsheet
+# Project II: Visualize summary data with Excel (New!)
+https://user-images.githubusercontent.com/91002274/149338006-fe38b38a-a995-4161-bef2-0d64cfa5ef72.mov
+
+## VBA CODES:
+    To be updated
+## Explanatory Documents:
+### Type 1: scope of work
+    To be updated
+### Type 2: report
+    To be updated
+
+
+# Project I: Automate data entry process with macro-enabled spreadsheet
 ## VBA CODES:
     1. Insert_buttonA() 
     2. Insert_buttonB() 
