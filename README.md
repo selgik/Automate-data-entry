@@ -1,5 +1,5 @@
 # Project II: Visualize summary data with Excel (New!)
-https://user-images.githubusercontent.com/91002274/149338006-fe38b38a-a995-4161-bef2-0d64cfa5ef72.mov
+
 
 ## VBA CODES:
     To be updated
