@@ -52,9 +52,9 @@ TABLE OF CONTENTS:
      (3) Step 3 - process data
          a. Create pivot tables
          - Charts will be created based on the pivot tables. For each type of chart, independent pivot table will need to be created.
-         - All calculations, pivot tables and data validation lists etc. to be organized in this sheet_3. 
-           To avoid confusion and breaking the format, this sheet will need to be protected and hidden when distributed to users.
-         - Copy data, use VLOOKUP and pivot functions to clean data
+         - All calculations, pivot tables and data validation lists etc. will be organized in this sheet_3. 
+         b. Protect the sheet
+         - To avoid confusion and breaking the format, this sheet will need to be protected and hidden when distributed to users.
          
      (4) Step 4 - data visualization
      (5) Step 5 - test
