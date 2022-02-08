@@ -10,15 +10,18 @@ TABLE OF CONTENTS:
 
   1. MOTIVATION
      (1) Task:
-         I need to spend certain amount of time (for example: at least 5.5h) to certain project on daily basis. 
+         I need to spend certain amount of time (for example: at least 5.5h) to assigned project on daily basis. 
          Although I can work flexibly, as working on project 8h one day and 2h on another day, 
          it is recommended to meet average goal of mentioned 5.5h. 
          
      (2) Problem:
-         a. I need to manually calculate to meet daily, weekly and monthly goal.
-         b. 
-         
+         a. I need to manually calculate the project time to meet daily, weekly and monthly goal. 
+         b. I want analyze my time and see the area of improvement
+            (ex. if I am not meeting 5.5h goal, where am I spending time? where can I improve?) 
+            
      (3) Motivation:
+         a. I want to be free of calculating how many hours left to meet weekly/monthly average goal. 
+         b. I want to know where am I spending rest of my time and where can I reduce to meet targeted project hour.
          
   2. PROCESS DESIGN
      (1) 
