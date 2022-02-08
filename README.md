@@ -4,10 +4,8 @@ https://user-images.githubusercontent.com/91002274/149339190-4cc7ebc1-31fd-4d58-
 ## VBA CODES:
     To be updated
 ## Explanatory Documents:
-### Type 1: scope of work
-    To be updated
-### Type 2: report
-    To be updated
+### Type 1: report
+    In progress
 
 
 # Project I: Automate data entry process with macro-enabled spreadsheet
