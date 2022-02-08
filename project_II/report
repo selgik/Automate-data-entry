@@ -40,9 +40,9 @@ TABLE OF CONTENTS:
          h. sheet_2: raw data sheet where fed data from the form will be organized.
          i. sheet_3: calculation sheet where pivot tables and other calculations will be performed.
          
-     (2) Step 2 - data entry form (ref: 2(1)a.)
-         a. What do I want to do? I want...
-         - User to feed data (select or type) on date, day type (full day/half day) and project hour.
+     (2) Step 2 - data entry form (ref: 2(1)a)
+         a. What do I want to do? I want:
+         - User to feed (select or type) date, day type (full day/half day) and project hour.
          - User to optionally feed activity hour to analyze how remaining hours are used.
          b. How?
          - Solution: use VBA. Create one spreadsheet containing form, another spreadsheet containing fed data.
