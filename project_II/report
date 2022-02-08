@@ -26,6 +26,14 @@ TABLE OF CONTENTS:
          c. A dashboard solving problem a and b, could be helpful.
          
   2. PROCESS DESIGN
+    ---------------------------------------------------------------------------------------------------------
+     Overall workflow: 
+         User enters data via the form in sheet_1 -> 
+              Data is transffered to sheet_2, new data to be piled up in the next row -> 
+                  Data is re-transffered to sheet_3 undergoing cleaning, calculation, pivoting process -> 
+                      Cleaned data is represented in the graphs and bulletin in the sheet_1.                      
+     ---------------------------------------------------------------------------------------------------------
+       
      (1) Step 1 - layout design
          I want to have one-page dashboard:
          a. 1st component will be the form, user will be updating last working day's project hour.
@@ -36,7 +44,7 @@ TABLE OF CONTENTS:
          f. 6th component will be a table showing monthly summary.
          
          I want to have 3 spreadsheet:
-         g. sheet_1: main dashboard sheet containing form, bulleting, charts and table.
+         g. sheet_1: main dashboard sheet containing form, bulletin, charts and table.
          h. sheet_2: raw data sheet where fed data from the form will be organized.
          i. sheet_3: calculation sheet where pivot tables and other calculations will be performed.
          
@@ -69,11 +77,28 @@ TABLE OF CONTENTS:
          - Did I put too much information? Sould I reduce charts? Did I select too many chart types?
          - Will the form be placed on the left or right? Which one is more user friendly? 
          
+         
   3. BUILDING SCHEMA
-     (1) 
+     (1) Worksheet:
+         Worksheet Name         Description
+         a. sheet_1             main dashboard sheet containing form, bulletin, charts and table.
+         b. sheet_2             raw data sheet where fed data from the form will be organized.
+         c. sheet_3             calculation sheet where pivot tables and other calculations will be performed.
 
+     (2) Table (sheet_1):
+         Field Name             Description
+         a. Working hour        Add data validation. Select from the list: full or half day.
+         b. Date                Add data validation. Select from the list: list of last "n" date. 
+         c. Project hour        User can type in the form of hour or minute.
+         d. Other activity(s)   User can type in the form of hour or minute.
+         e. Comment             User can type strings.
+         + Button               User can click. Link VBA code to transffered entered data from sheet_1 to sheet_2.
+      
+     (3) Table (sheet_3):
+         Pivot tables to be created from data source sheet_2.
+       
 4. FINAL DELIVABLES
-      a
+
 
 
 
