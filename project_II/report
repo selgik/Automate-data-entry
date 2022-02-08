@@ -40,15 +40,18 @@ TABLE OF CONTENTS:
          h. sheet_2: raw data sheet where fed data from the form will be organized.
          i. sheet_3: calculation sheet where pivot tables and other calculations will be performed.
          
-     (2) Step 2 - data entry form (ref: 2(1)a)
+     (2) Step 2 - enter data (ref: 2(1)a)
          a. What do I want to do? I want:
          - User to feed (select or type) date, day type (full day/half day) and project hour.
          - User to optionally feed activity hour to analyze how remaining hours are used.
+         - Fed data to be organized in table in a spearate sheet.
          b. How?
          - Solution: use VBA. Create one spreadsheet containing form, another spreadsheet containing fed data.
          - Flow: user feeds data to the form in sheet_1 -> VBA -> data is organized within the table in sheet_2. 
          
-     (3) Step 3 - 
+     (3) Step 3 - process data
+         a. 
+         
      (4) Step 4 - data visualization
      (5) Step 5 - test
                  
