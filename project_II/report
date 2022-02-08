@@ -58,7 +58,12 @@ TABLE OF CONTENTS:
          - Additinoally, this sheet_3 will be hidden as users do not need to see background data (table, pivot, reference list etc.)
          
      (4) Step 4 - data visualization
-     (5) Step 5 - test
+         a. Decide optimal chart type
+         - 2(1)c: donut chart
+         - 2(1)d: bar or line chart
+         - 2(1)e: donut chart combining with horizontal bar chart showing top ranks in remaining hour section. 
+    
+     (5) Step 5 - 
                  
   3. BUILDING SCHEMA
      (1) 
