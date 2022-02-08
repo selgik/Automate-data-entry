@@ -28,15 +28,22 @@ TABLE OF CONTENTS:
   2. PROCESS DESIGN
      (1) Step 1 - layout design
          I want to have one-page dashboard:
-         1st component will be the form, user will be updating last working day's project hour.
-         2nd component will be the bulletin where remaining hour for given week is calculated.
-         3rd component will be a chart showing progress against the goal for the last working day.
-         4th component will be a chart showing daily progress (time spent on project hour).
-         5th component will be a chart analyzing activies on reamining hours.
-         6th component will be a table showing monthly summary.
+         a. 1st component will be the form, user will be updating last working day's project hour.
+         b. 2nd component will be the bulletin where remaining hour for given week is calculated.
+         c. 3rd component will be a chart showing progress against the goal for the last working day.
+         d. 4th component will be a chart showing daily progress (time spent on project hour).
+         e. 5th component will be a chart analyzing activies on reamining hours.
+         f. 6th component will be a table showing monthly summary.
+           
+     (2) Step 2 - data entry (ref: 2(1)a.)
+         a. What do I want to do? I want...
+         - User to feed data (select or type) on date, day type (full day/half day) and project hour.
+         - User to optionally feed activity hour to analyze how remaining hours are used.
+         b. How?
+         - solution: use VBA. Create one spreadsheet containing form, another spreadsheet containing fed data.
+         - flow: user feed data in the form -> VBA -> data is organized within the table in another sheet. 
+        
          
-         
-     (2) Step 2 - data entry
      (3) Step 3 - data transfer
      (4) Step 4 - data visualization
      (5) Step 5 - test
