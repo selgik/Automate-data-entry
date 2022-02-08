@@ -94,8 +94,9 @@ TABLE OF CONTENTS:
          e. Comment             User can type strings.
          + Button               User can click. Link VBA code to transffered entered data from sheet_1 to sheet_2.
       
-     (3) Table (sheet_3):
-         Pivot tables to be created from data source sheet_2.
+     (3) Tables (sheet_2, sheet_3):
+         sheet_2: data entered by user via the form in the sheet_1 will be transffered. New data will be piled up in the next row.
+         sheet_3: Pivot tables to be created from data source sheet_2.
        
 4. FINAL DELIVABLES
 
