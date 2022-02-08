@@ -93,14 +93,11 @@ TABLE OF CONTENTS:
          d. Other activity(s)   User can type in the form of hour or minute.
          e. Comment             User can type strings.
          + Button               User can click. Link VBA code to transffered entered data from sheet_1 to sheet_2.
-      
-     (3) Tables (sheet_2, sheet_3):
-         sheet_2: data entered by user via the form in the sheet_1 will be transffered. New data will be piled up in the next row.
-         sheet_3: Pivot tables to be created from data source sheet_2.
+       
        
 4. FINAL DELIVABLES
-
-
-
+   User has one-stop page where they can feed the data and review the status/progress/analysis with visual aids real time. 
+   This dashboard type can be applied to those who needs to track or hit the tageted hour.
+   Ex. operation center such as call center where each individual has targeted hour to hit.
 
 - END - 
