@@ -5,8 +5,10 @@ https://user-images.githubusercontent.com/91002274/149339190-4cc7ebc1-31fd-4d58-
     To be updated
 ## Explanatory Documents:
 ### Type 1: report
-    In progress
-
+    1. Motivation
+    2. Process Design
+    3. Building Schema
+    4. Final Delivables
 
 # Project I: Automate data entry process with macro-enabled spreadsheet
 ## VBA CODES:
