@@ -46,7 +46,7 @@ TABLE OF CONTENTS:
          - User to optionally feed activity hour to analyze how remaining hours are used.
          - Fed data to be organized in table in a spearate sheet.
          b. How?
-         - Solution: use VBA. Create one spreadsheet containing form, another spreadsheet containing fed data.
+         - Solution: use VBA. Create button which will trigger the data transfer process.
          - Flow: user feeds data to the form in sheet_1 -> VBA -> data is organized within the table in sheet_2. 
          
      (3) Step 3 - process data
