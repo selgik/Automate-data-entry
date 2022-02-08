@@ -53,8 +53,9 @@ TABLE OF CONTENTS:
          a. Create pivot tables
          - Charts will be created based on the pivot tables. For each type of chart, independent pivot table will need to be created.
          - All calculations, pivot tables and data validation lists etc. will be organized in this sheet_3. 
-         b. Protect the sheet
-         - To avoid confusion and breaking the format, this sheet will need to be protected and hidden when distributed to users.
+         b. Hide the sheet
+         - To avoid confusion and breaking the format, all sheets will be protected except where user is feeding data in the form.
+         - Additinoally, this sheet_3 will be hidden as users do not need to see background data (table, pivot, reference list etc.)
          
      (4) Step 4 - data visualization
      (5) Step 5 - test
