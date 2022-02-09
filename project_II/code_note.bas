@@ -1,3 +1,6 @@
+'User fills in the form, click the button and data will be transffered.
+'Data transfer route: Main_Dashboard -> sheet_2
+
 Sub Update_Prd()
 
 Dim a As Integer
@@ -6,7 +9,6 @@ a = Worksheets("sheet_2").Cells(1, 11).Value
 
 'Alert msg added
 If IsEmpty(Worksheets("Main_Dashbaord").Range("C5")) = False Then
-'end
 
 Worksheets("sheet_2").Cells(a, 2) = Worksheets("Main_Dashbaord").Cells(5, 3)
 Worksheets("sheet_2").Cells(a, 3) = Worksheets("Main_Dashbaord").Cells(6, 3)
