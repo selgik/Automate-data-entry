@@ -40,7 +40,7 @@ Range("C6").Select
 'Step3: refresh pivot so that dashboard can be auto-refreshed upon clicking button.
 ActiveWorkbook.RefreshAll
     
-'Step 4: sort horizontal bar chart analyzing offline activity, in ASC order.
+'Step 4: sort horizontal bar chart analyzing offline activity, in ASC order. (recorded via macro)
     ActiveWorkbook.Worksheets("sheet_3").AutoFilter.Sort.SortFields.Clear
     ActiveWorkbook.Worksheets("sheet_3").AutoFilter.Sort.SortFields.Add2 Key:= _
         Range("AG2:AG9"), SortOn:=xlSortOnValues, Order:=xlAscending, DataOption _
