@@ -2,7 +2,7 @@
 https://user-images.githubusercontent.com/91002274/149339190-4cc7ebc1-31fd-4d58-9898-483535703a6c.mov
 
 ## VBA CODES:
-    code_note.bas
+    code_note_p2.bas
 ## Explanatory Documents:
 ### Type 1: report
     1. Motivation
@@ -12,11 +12,7 @@ https://user-images.githubusercontent.com/91002274/149339190-4cc7ebc1-31fd-4d58-
 
 # Project I: Automate data entry
 ## VBA CODES:
-    1. Insert_buttonA() 
-    2. Insert_buttonB() 
-    3. Split()
-    4. MultipleSelection()
-    5. Clear_button()
+    code_note_p1.bas
 
 ## Explanatory Documents:
 ### Type 1: scope of work
