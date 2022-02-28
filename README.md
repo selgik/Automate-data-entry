@@ -10,7 +10,7 @@ https://user-images.githubusercontent.com/91002274/149339190-4cc7ebc1-31fd-4d58-
     3. Building Schema
     4. Final Delivables
 
-# Project I: Automate data entry process
+# Project I: Automate data entry
 ## VBA CODES:
     1. Insert_buttonA() 
     2. Insert_buttonB() 
