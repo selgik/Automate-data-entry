@@ -1,6 +1,6 @@
 '-------------------------------------------------------------------------------------------------
 ' GENERAL NOTE
-' Back tick ' in front indicate it is a note. No back tick means VBA code. 
+' Back tick ' in front indicate it is a note.
 ' Cells(x, y) in VBA indicates Cells(row#, column#). Ex: Cell D3 = Cells(3, 4) 
 ' To add VBA as sub query, add code name without () in right position. See example under #2 below. 
 '-------------------------------------------------------------------------------------------------
