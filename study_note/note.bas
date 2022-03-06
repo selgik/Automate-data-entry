@@ -41,7 +41,7 @@ End Sub
         
 Sub Filter()    
     ActiveSheet.Range("$B$3:$E$9").AutoFilter Field:=2, Criteria1:=Array("korean", "singaporean", _
-                                                        "japanese", "vietnamese), _
+                                                        "japanese", "vietnamese"), _
                                                         Operator:=xlFilterValues
 End Sub
         
