@@ -8,7 +8,7 @@
 '   (Q2) What is code, procedure, module and project?
 '   (A2) Hirarchy: code < procedure < module < project
 '        - Code: object, property and method makes code. Do something or make effects to something.
-'        - Procedure: codes make procedure. It is a step-by-step, complete set of action. Procedure creates event (result).
+'        - Procedure: codes make procedure. It is a step-by-step, a complete set of action. Procedure creates event (result).
 '        - Module: Procedures make modules. It is a group/set of procedures.
 '        - Project: modules make project. It is group of modules within the worksheet.
 
@@ -16,7 +16,6 @@
 '   (Q1) When I click the worksheet, I want certain cell/range to be highlighted.
 '   (A1) Use Worksheet_Activate() --> Need to insert below code to the target sheet. 
 
-'Below is a complete procedure
 Private Sub Worksheet_Activate()
   Range("A1:E5").Select
     Selection.Interior.Color = RGB(200, 200, 100)
