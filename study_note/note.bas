@@ -47,3 +47,18 @@ Sub Filter()
 End Sub
        
 '4. FILTER OPTIONS (AdvancedFilter)
+'   (Q1) Can I select item from the list and apply filter?
+'   (A0) Pre-requisite: item list in the different sheet
+'        Flow: link list with ComboBox -> get idex number and name -> create button -> record/link advanced filter
+'   (A1) Use ComboBox and filter, show results in the same sheet
+        
+        
+'   (A2) Use ComboBox and filter, show results in the differnt sheet       
+                
+        
+        
+        
+        
+        
+        
+        
