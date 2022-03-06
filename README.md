@@ -1,6 +1,18 @@
-## Below video illustrates dashboard from Project II
+### Below video illustrates dashboard from Project II
 https://user-images.githubusercontent.com/91002274/149339190-4cc7ebc1-31fd-4d58-9898-483535703a6c.mov
 
+# Project II: Visualize summary data
+## Details:
+    1. VBA CODES:
+       code_note_p2.bas
+    
+    2. Explanatory Documents:
+       Type: report
+        - Motivation
+        - Process Design
+        - Building Schema
+        - Final Delivables
+        
 # Project I: Automate data entry
 ## Details:
     1. VBA CODES:
@@ -18,23 +30,10 @@ https://user-images.githubusercontent.com/91002274/149339190-4cc7ebc1-31fd-4d58-
         - Process Design
         - Building Schema
         - Final Delivables
-
-# Project II: Visualize summary data
-## Details:
-    1. VBA CODES:
-       code_note_p2.bas
-    
-    2. Explanatory Documents:
-       Type: report
-        - Motivation
-        - Process Design
-        - Building Schema
-        - Final Delivables
-
+        
 # Study Note: 
 ## Details:
-    1. VBA CODES:
-       study_note.ba
+    In Progress
        
 <!--
 - Summary: Macro-enabled data entry form to simplify tracking process.
