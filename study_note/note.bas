@@ -49,16 +49,38 @@ End Sub
 '4. FILTER OPTIONS (AdvancedFilter)
 '   (Q1) Can I select item from the list and apply filter?
 '   (A0) Pre-requisite: item list in the different sheet
-'        Flow: link list with ComboBox -> get idex number and name -> create button -> record/link advanced filter
+'        Flow: [A] create ComboBox
+'              [B] link list with ComboBox via FormatControl > Input Range: list in different sheet > Cell link: anywhere (ex.A1)
+'              [C] use INDEX function in blank cell (ex. A2) to obtain referenced item name: =INDEX(list_range, A1)
+'              [D] create button -> record advanced filter -> link macro with button. Hide or mask A1 and A2.
 '   (A1) Use ComboBox and filter, show results in the same sheet
-        
+  
+Sub list_filter()
+
+    Application.CutCopyMode = False
+    Application.CutCopyMode = False
+      Range("B6:E16").AdvancedFilter Action:=xlFilterInPlace, CriteriaRange:= _
+        Range ("B3:B4"), Unique:=False
+        'B6:E16 is range where data table exist
+        'B3:B4 is column name and item item (ex. Fruit | Apple)
+        'Note: click button -> do advanced filter in the current sheet where Apple appears under Fruit column
+End Sub     
         
 '   (A2) Use ComboBox and filter, show results in the differnt sheet       
-                
+Sub sn_filter()
+
+    Application.CutCopyMode = False
+    Application.CutCopyMode = False
+        
+     Range("B6:E16").AdvancedFilter Action:=xlFilterCopy, CriteriaRange:= _
+        Range("B3:B4"), CopyToRange:=Range("result!B2:D2"), Unique:=False
+        'result is a new sheet created for filtered results 
+        'In B2:D2 you copy and paste the needed coulmn name from original table
+        'Note: click button -> do advanced filter in the sheet "result" by pasting filtered results for column B2:D2
+End Sub
+
         
         
         
-        
-        
-        
+'Editing in progress       
         
