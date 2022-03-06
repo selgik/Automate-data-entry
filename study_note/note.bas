@@ -17,7 +17,7 @@
          Call Total_sum
         End Sub
 
-'3. FILTER OPTIONS 
+'3. FILTER OPTIONS (AutoFilter)
 '   (Q1) Filter where column 2 contains words "kor" or "sg"
 '   (A1) Use Operator:=xlOr 
 '   (A2) Simplify the codes
@@ -45,6 +45,5 @@ Sub Filter()
                                                         "japanese", "vietnamese"), _
                                                         Operator:=xlFilterValues
 End Sub
-        
-        
-'4.
+       
+'4. FILTER OPTIONS (AdvancedFilter)
