@@ -1,4 +1,4 @@
-'BASIC: LET'S START FROM MACRO
+'BASIC: LET'S START FROM RECORDING MACRO
 
 '1. FIND MACRO
 '   (Q) Where can I find macro I recorded? 
