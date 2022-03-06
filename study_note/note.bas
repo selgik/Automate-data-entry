@@ -39,10 +39,9 @@ End Sub
 '   (Q2) Filter where column 2 matches with keywords (multiple or)
 '   (A2) Criteria1:=Array("keyword 1","keyword 2","keyword 3")
         
-Sub Filter()
-                
-    ActiveSheet.Range("$B$3:$E$9").AutoFilter Field:=2, Criteria1:=Array("korean", _
-                                                         "singaporean", "japanese", "vietnamese), _
+Sub Filter()    
+    ActiveSheet.Range("$B$3:$E$9").AutoFilter Field:=2, Criteria1:=Array("korean", "singaporean" _
+                                                        "japanese", "vietnamese), _
                                                         Operator:=xlFilterValues
 End Sub
         
