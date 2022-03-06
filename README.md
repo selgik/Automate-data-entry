@@ -1,33 +1,34 @@
 # Project II: Visualize summary data with Excel (New!)
 https://user-images.githubusercontent.com/91002274/149339190-4cc7ebc1-31fd-4d58-9898-483535703a6c.mov
 
-## VBA CODES:
-    code_note_p2.bas
-## Explanatory Documents:
-### Type 1: report
-    1. Motivation
-    2. Process Design
-    3. Building Schema
-    4. Final Delivables
+## Details:
+    1. VBA CODES:
+       code_note_p2.bas
+    
+    2. Explanatory Documents:
+       Type: report
+        - Motivation
+        - Process Design
+        - Building Schema
+        - Final Delivables
 
 # Project I: Automate data entry
-## VBA CODES:
-    code_note_p1.bas
+## Details:
+    1. VBA CODES:
+       code_note_p1.bas
+       
+    2. Explanatory Documents:
+       Type 1: scope of work
+        - Purpose
+        - Scope / Major Project Activities
+        - This project does not include
+        - Deliverables
 
-## Explanatory Documents:
-### Type 1: scope of work
-
-    1. Purpose
-    2. Scope / Major Project Activities
-    3. This project does not include
-    4. Deliverables
-
-### Type 2: report
-
-    1. Motivation
-    2. Process Design
-    3. Building Schema
-    4. Final Delivables
+       Type 2: report
+        - Motivation
+        - Process Design
+        - Building Schema
+        - Final Delivables
 
 <!--
 - Summary: Macro-enabled data entry form to simplify tracking process.
