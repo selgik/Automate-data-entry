@@ -40,7 +40,7 @@ End Sub
 '   (A2) Criteria1:=Array("keyword 1","keyword 2","keyword 3")
         
 Sub Filter()    
-    ActiveSheet.Range("$B$3:$E$9").AutoFilter Field:=2, Criteria1:=Array("korean", "singaporean" _
+    ActiveSheet.Range("$B$3:$E$9").AutoFilter Field:=2, Criteria1:=Array("korean", "singaporean", _
                                                         "japanese", "vietnamese), _
                                                         Operator:=xlFilterValues
 End Sub
