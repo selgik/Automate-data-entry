@@ -65,8 +65,9 @@ Sub list_filter()
         'B3:B4 is column name and item item (ex. Fruit | Apple)
         'Note: click button -> do advanced filter in the current sheet where Apple appears under Fruit column
 End Sub     
+       
+'   (A2) Use ComboBox and filter, show results in the differnt sheet   
         
-'   (A2) Use ComboBox and filter, show results in the differnt sheet       
 Sub sn_filter()
 
     Application.CutCopyMode = False
