@@ -80,8 +80,3 @@ Sub sn_filter()
         'Note: click button -> do advanced filter in the sheet "result" by pasting filtered results for column B2:D2
 End Sub
 
-        
-        
-        
-'Editing in progress       
-        
