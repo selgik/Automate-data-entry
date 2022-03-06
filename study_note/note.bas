@@ -4,7 +4,6 @@
 '   (Q) Where can I find macro I recorded? 
 '   (A) Developer > Visual Basic ("VB") > Modules
 
-
 '2. USE MACRO
 '   (Q) How to use macro?
 '   (A1) By creating a shortcut: Developer > Macros
@@ -16,7 +15,6 @@
         Sub Button_Click()
          Call Total_sum
         End Sub
-
 
 '3. FILTER OPTIONS 
 '   (Q1) Filter where column 2 contains words "kor" or "sg"
