@@ -7,7 +7,8 @@
 '2. USE MACRO
 '   (Q) How to use macro?
 '   (A1) By creating a shortcut: Developer > Macros
-'   (A2) By creating a button: Deveoper > Button > Create button AND THEN assign macro: 
+'   (A2) By creating Quick Access Toolbar: Go to QAT ... > More Commands > Choose Commands From: Macros > Add
+'   (A3) By creating a button: Deveoper > Button > Create button AND THEN assign macro: 
 '        Automatically by right clicking > Assign macros OR
 '        Manually by VB > create a module (you will see recorded macro's vba) > call macro under button's module
 '        Example below: I created macro under the name "Total_sum" so I add macro name under my button.
