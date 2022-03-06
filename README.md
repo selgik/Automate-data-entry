@@ -33,7 +33,8 @@ https://user-images.githubusercontent.com/91002274/149339190-4cc7ebc1-31fd-4d58-
         
 # Study Note: 
 ## Details:
-    In Progress
+    ~ In Progress ~
+    This is a self study note from YouTube "Excel Macro Visual Basic Application" by IB96
        
 <!--
 - Summary: Macro-enabled data entry form to simplify tracking process.
