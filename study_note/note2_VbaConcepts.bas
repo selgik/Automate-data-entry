@@ -12,6 +12,7 @@
 '        - Module: Procedures make modules. It is a group/set of procedures.
 '        - Project: modules make project. It is group of modules within the worksheet.
 
+
 '2. CREATE EVENT UPON USER ACTION
 '   (Q1) When I click the worksheet, I want certain cell/range to be highlighted.
 '   (A1) Use Worksheet_Activate() --> Need to insert below code to the target sheet. 
