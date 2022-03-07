@@ -43,3 +43,41 @@ Private Sub Worksheet_SelectionChange(ByVal Taget As Range)
 End Sub
 
     
+'3. HOW TO ORGANIZE PROCEDURE AND MODULE
+'   (Q1) How to create procuedure an module?
+'   (A1) Developer > VB > Insert procedure 
+'        Developer > VB > Insert module > Sub > Public (if you need to use for given project) or Private 
+
+'   (Q2) How to organize procedures and modules?
+'   (A2) In the module, write codes (ex. Action()) -> create procedure in the targetted worksheet -> call procedure Action
+
+'4. USE MODULE'S PROCEDURE
+'Case1: Workfolw 1. create module: show message box ex. "today is 01/01/2022 yay!"
+Public Sub msg_info()
+      MsgBox "today is " & Date & "yay!"
+      'error msg will apper if & is not inserted, due to string + function being mixed up.
+End Sub
+
+'Case1: Workfolw 2. in the targetted worksheet, create procedure and insert module from workflow 1.
+Private Sub worksheet_selectionchange(ByVal target As Range)
+      msg_info
+End Sub
+
+'Case2: Workflow 1. create module: user types their name. Message will show up as "Hello Sylvia you will be redired"    
+Sub authorize_msg()
+    Dim name As String
+    name = InputBox("Enter you name", "Authorize")
+    MsgBox "Hello " + name + ", you will be redirected!"
+End Sub
+
+'Case2: Workflow 2. create button to order series of action
+'       User clicks button --> user types name --> message box will appear --> user is redirected to result worksheet.            
+
+Sub Button2_Click()
+ authorize_msg
+ Sheets("result").Visible = True
+ 'True/False usually appears when property is being defined.
+ Sheets("result").Activate
+End Sub
+    
+    
