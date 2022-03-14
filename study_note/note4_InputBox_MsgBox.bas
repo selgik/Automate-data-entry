@@ -15,7 +15,7 @@ Sub GST_calculator()
   MsgBox "The GST is " & gst
 End Sub
 
-'If want to show result in certain cell instead of MsgBox, I can write as:
+'If I want to show result in certain cell instead of MsgBox, I can write as:
   Range("A1").Select
   Selection.Value = gst
 
