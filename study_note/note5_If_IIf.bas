@@ -34,7 +34,8 @@ End Sub
   
 '2. IIF
 '   (Q) What is the difference between IF vs IFF
-'   (A) Syntax: IFF(condition, true value, falsevalue)
+'   (A) Different syntax and performance (to be slower than IF). Similar to Excel's IF function.
+'       Syntax: IFF(condition, true value, falsevalue)
   
 Sub is_it_even_number_or_odd_number_v2()
   Dim i As Integer
