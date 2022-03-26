@@ -8,7 +8,7 @@
 '                 ELSEIF x meets condition 2 then output 2 -> ELSE output 3 -> END IF
 '                 (ELSEIF is optional. In such case, flow is IF -> ELSE -> END IF)
 
-'Ex 1) User enter number -> system tells whether the number is odd or even number.
+'Ex 1) User enters number -> system tells whether the number is odd or even number.
 Sub is_it_even_number_or_odd_number()
   Dim i As Integer
   i = InputBox("Enter the number")
@@ -31,6 +31,28 @@ Sub wsheet_index()
   End If
 End Sub
   
+'Ex 3) User enters number -> clicks button -> system will calculate based on the defined criteria
+  Sub tax_calculator() 
+    Dim price As Currency
+    Dim rate As Double
+    
+    price = Range("A1").Value
+    If price <=5000 Then
+      rate = 0.01
+    ElseIf price <=6000 Then
+        rate = 0.02
+      ElseIf price <=7000 Then
+          rate = 0.03
+        ElseIf price <=8000 Then
+            rate = 0.04
+    Else 
+      rate = 0.05
+    End if
+          
+          'There is no need to declare another variable 
+          Range("A2").Value = price * rate
+  End Sub
+        
   
 '2. IIF
 '   (Q) What is the difference between IF vs IFF
