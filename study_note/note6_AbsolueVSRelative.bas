@@ -33,7 +33,4 @@ End Sub
       'This is same as ActiveCell.Value="=sum(B3:C3)" in absoulte reference.   
     End Sub
     
-
-'~TBC
-    
    
