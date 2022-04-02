@@ -26,13 +26,12 @@ End Sub
 
 '2) What we really need to do is, to repeat the process from D3 to D10. We need FOR ~ NEXT statement.
 Sub conditional_coloring()
-  Dim i, cnt as integer
+  Dim i as integer
   For i = 3 To 11 Step 1
   'i will be row number, I will start coloring from D3 to D11, increasing row number by 1
   
   Select Case Cells(i, 4)
-  'It's column D, D is 4th column --> Cells (row#, column#)
-    
+  'It's column D, D is 4th column --> Cells (row#, column#)    
     Case Is > 9
       Cells(i, 4).Interior.Color = RGB(0 ,0, 255)
     Case 6 To 9  
@@ -46,3 +45,23 @@ End Sub
 
 
 '3. Let's add msgbox indicating how many students have failed and need to re-take the test
+Sub conditional_coloring()
+Dim i, cnt as integer
+  For i = 3 To 11 Step 1
+  'i will be row number, I will start coloring from D3 to D11, increasing row number by 1
+  
+  Select Case Cells(i, 4)
+  'It's column D, D is 4th column --> Cells (row#, column#)    
+    Case Is > 9
+      Cells(i, 4).Interior.Color = RGB(0 ,0, 255)
+    Case 6 To 9  
+      Cells(i, 4).Interior.Color = RGB(250, 200, 30)
+    Case Else
+    'Same as Case Is < 6
+      Cells(i, 4).Interior.Color = RGB(255, 0, 0)
+      cnt = cnt+1
+  End Select
+Next i 
+MsgBox "The number of students who needs to re-take the test = " & cnt
+End Sub
+
