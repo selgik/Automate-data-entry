@@ -49,7 +49,7 @@ End Sub
 'End Sub
 
 
-'3) Finally, imagine user wants to fill in the number starting from 260. 
+'3) Next, imagine user wants to fill in the number starting from 260. 
 'InputBox can be made for user to decide from which number they want to start filling-in (and end too.)
 'Imagine user needs to fill in from B3, which is Cells(3,1).
 
@@ -63,3 +63,17 @@ Sub Repeat_Ask()
       Cells(start + incr, 2) = i
   Next i
 End Sub
+
+'4) Finally, imagine user wants to fill-in with dates next to the column B from 3rd scenario.
+'Example: From B3 to B130, we have certain numbers filled in per exercise 3. 
+'         User now wants to fill in with the current date from C3 to C130
+
+Sub Fill_Date()
+  Dim i, rowcount As Integer
+  rowcount = Range("B3").End(xlDown).Row
+  'Count the number of rows starting from B3 till the data ends
+  For i = 3 to rowcount
+    Cells(i, 3) = Date
+  Next
+End Sub
+
