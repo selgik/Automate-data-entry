@@ -64,6 +64,7 @@ Sub Repeat_Ask()
   Next i
 End Sub
 
+
 '4) Finally, imagine user wants to fill-in with dates next to the column B from 3rd scenario.
 'Example: From B3 to B130, we have certain numbers filled in per exercise 3. 
 '         User now wants to fill in with the current date from C3 to C130
