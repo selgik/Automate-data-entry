@@ -1,5 +1,3 @@
-' ~~~~ NOTES IN PROGRESS ~~~~
-
 'BASIC: NESTED FOR (LOOP PART 2)
 
 '1. FOR I, FOR J
@@ -29,4 +27,18 @@ Sub Nested_ex()
 End Sub
 
 
-'2)
+'2) Imagine user has sales data from B4 to G30. With one click, user wants to see the cell that exceeded target number.
+
+Sub Target_check()
+ Dim i, j As Integer
+  For i = 4 To 30
+    For j = 2 To 7
+       If Cells(i, j) >= 2500 Then
+          Cells(i, j).Interior.Color = RGB(20, 200, 40)
+      End If
+      'Otherwise, end if (no need else)
+    Next j
+  Next i
+End Sub
+
+
