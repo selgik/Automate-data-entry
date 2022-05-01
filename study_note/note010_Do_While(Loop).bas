@@ -1,4 +1,4 @@
-'BASIC: NESTED FOR (LOOP PART 2)
+'BASIC: DO WHILE, DO UNTIL(LOOP PART 3)
 
 '1. DO WHILE
 '   (Q) Instead of telling when to start and end the loop, I want to tell the condition
