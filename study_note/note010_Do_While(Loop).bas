@@ -7,8 +7,8 @@
         Do Until i > 5
     
 '1) Simple sum calculation from 1 to 10, can be written with For/Next as well as Do While/Loop:
-'For/Next:
 
+'For/Next:
 Sub for_next_ex()
   Dim i, sum As Integer
     sum = 0
