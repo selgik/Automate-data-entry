@@ -46,7 +46,7 @@ End Sub
   End Sub
   
         
-'3) TIP: Understanding Loop
+'3) TIP: Understanding the Loop
 ' What if I change the order from 2nd example?
         
   Sub example()
