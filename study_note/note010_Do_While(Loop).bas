@@ -45,3 +45,21 @@ End Sub
         Loop
   End Sub
   
+        
+'3) TIP: Understanding Loop
+' What if I change the order from 2nd example?
+        
+  Sub example()
+    Dim i As Integer
+    Dim code As String
+      i = 1
+      code = InputBox("Enter the sales code")
+      'If I put this part here, this won't be the part of the loop. Inputbox will only appear once.
+      'That means, if I put "A123", loop will repeat the tast by filling cells till 15th row with "A123"
+        Do While i <= 15
+           Cells(i, 1) = code
+          i = i +1
+        Loop
+  End Sub
+        
+        
