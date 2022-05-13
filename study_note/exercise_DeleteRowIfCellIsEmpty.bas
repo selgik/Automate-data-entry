@@ -11,3 +11,4 @@ Sub delete_rows()
 End Sub
 
 'Tip: For adding/removing task, it is recommended to start loop backward. 
+'Failure Note: IsEmpty did not work out --> If IsEmpty(Range("B" & i)) Then Rows([i]).EntireRow.Delete
