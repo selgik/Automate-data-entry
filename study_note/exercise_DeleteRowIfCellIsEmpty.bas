@@ -12,3 +12,5 @@ End Sub
 
 'Tip: For adding/removing task, it is recommended to start loop backward. 
 'Failure Note: IsEmpty did not work out --> If IsEmpty(Range("B" & i)) Then Rows([i]).EntireRow.Delete
+'Reference of beautiful code and explanation -->
+'https://stackoverflow.com/questions/31206074/excel-vba-delete-entire-row-if-cell-in-column-d-is-empty
