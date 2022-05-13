@@ -1,4 +1,4 @@
-'Problem: You have worksheet with 1,000+ rows. There are empty rows in the worksheet and you need to remove them.
+'Problem: You have worksheet with 2,000 rows. There are empty rows in the worksheet and you need to remove them.
 'Solution: run VBA code with loop to find the empty cell and remove corresponding rows.
 
 Sub delete_row()
