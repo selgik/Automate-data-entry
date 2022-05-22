@@ -4,7 +4,6 @@
 
 
 '[1] 1st Attempt:
-
 Sub failed_quote_generator()
     MsgBox "=INDEX(B1:B100,RANDBETWEEN(1,ROWS(B1:B100)),1)"
 End Sub  
@@ -15,7 +14,6 @@ End Sub
 
 
 '[2] 2nd Attemtp:
-
 Sub test()
   Dim rng As Range
   Set rng = Range("A1")
