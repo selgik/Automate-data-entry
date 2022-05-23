@@ -54,5 +54,17 @@
 '   (4) Task: With one click, you want to highlight the sell containing certain keyword in team name.
 '       In example, you want to see the employee name highlighted with team name containing a keyword "sales".
 
+     Sub highligher()
+        Dim keyword As String
+        Dim rng As Range
 
+        keyword = Trim(InputBox ("Enter the search term"))
+
+        For Each rng In Range("B1:B100")
+              If InStr(1, rng.Value, keyword) <> 0 Then
+                 rng.Interior.Color = RGB(250, 200, 100)
+              End If
+        Next
+        
+     ENd Sub
   
