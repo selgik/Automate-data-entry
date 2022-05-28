@@ -12,24 +12,24 @@
 '       Scenario: With one click, you would like to generate random number from cell A1 to A20 (within the ranage of 1 to 100)
 
 Sub rnd_test_type1()
-  Randomize
-  'Why Randomize is needed? See this blog:
-  'https://www.techonthenet.com/excel/formulas/randomize.php#:~:text=The%20Randomize%20function%20would%20ensure,equivalent%20to%20the%20system%20timer.
+    Randomize
+    'Why Randomize is needed? See this blog:
+    'https://www.techonthenet.com/excel/formulas/randomize.php#:~:text=The%20Randomize%20function%20would%20ensure,equivalent%20to%20the%20system%20timer.
   
-  Dim i As Integer
-  For i = 1 to 50
-    Cells(i, 1).Value = Int(Rnd * 100) + 1
-    '*100 means, till 100 (number range between 1 to 100) 
-    'Without Int(), function will return double value.
-  Next
-End
+    Dim i As Integer
+    For i = 1 to 50
+        Cells(i, 1).Value = Int(Rnd * 100) + 1
+        '*100 means, till 100 (number range between 1 to 100) 
+        'Without Int(), function will return double value.
+    Next
+End Sub
 
 'Same code, but used with Range
 Sub rnd_test_type2()
-  Dim rng As Range  
-  For Each rng In Range("A1:A20")
-    rng.Value = Int(Rnd * 100) + 1  
-  Next
+Dim rng As Range  
+    For Each rng In Range("A1:A20")
+        rng.Value = Int(Rnd * 100) + 1  
+    Next
 End Sub
 
 
@@ -48,9 +48,9 @@ End Sub
 
 Sub cal_last_day()
 Dim d as Date
-MsgBox "The last day of this month is " & DateSerial(Year(d), Month(d)+1, 0)
-'When you put DateSerial(Year(d), Month(d), Day(d)), result will be today's date.
-'DateSerial(Year(d), Month(d)+1, 0) <- There is no 0st day of next month. It will show the last day of current month.
+    MsgBox "The last day of this month is " & DateSerial(Year(d), Month(d)+1, 0)
+    'When you put DateSerial(Year(d), Month(d), Day(d)), result will be today's date.
+    'DateSerial(Year(d), Month(d)+1, 0) <- There is no 0st day of next month. It will show the last day of current month.
 End Sub
 
 
