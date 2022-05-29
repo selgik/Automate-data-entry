@@ -1,0 +1,15 @@
+
+DATE  : May 29, 2022
+
+1. I have been using random Sub name in the study notes.
+2. Sub name is important as it will define the action.
+
+   (Example 1)
+   Private Sub Worksheet_Activate()
+   --> Codes will be processed upon activating the worksheet.
+   
+   (Example 2)
+   Sub Button1_Click()
+   --> Codes will be processed upon clicking the button.
+
+   
