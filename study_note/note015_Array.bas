@@ -79,6 +79,7 @@
     Dim Arr() As Integer
     Redim Arr(10) 
 
+
 '4. LBOUND / UBOUND
 '   Syntax : Lbound(array_name, dimension_number)
 '   Comment: These functions calculates the first / last number of the array.
