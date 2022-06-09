@@ -35,3 +35,5 @@ Loop
 MsgBox "Sell a set of " & (count - 1) & " ball(s). Last ball you are selling is " & order & "th one."
 
 End Sub
+
+'Fail Note: without last if part, I receive msgbox saying 0th order for 4th item in the array. 
