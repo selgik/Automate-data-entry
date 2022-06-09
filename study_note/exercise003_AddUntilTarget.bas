@@ -1,4 +1,4 @@
-'*** update Jun 9: Need to add Option Base 1, otherwise codes will show error
+'*** update Jun 9: Need to add Option Base 1, otherwise codes will show error message
 
 'Problem: You have 4 type of ball of red, yellow, green and blue. Each ball weights as follows,
 
