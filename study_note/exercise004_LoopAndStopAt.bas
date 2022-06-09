@@ -2,7 +2,7 @@
 
 'Problem: I have target grams to sell. (Example: 831g)
 '         I want to know how many sets of red/yellow/green/blue balls I have to sell (loop) and,
-'         I want to know what color is the ball I am selling at last (sequence).
+'         I want to know the color of last ball I am selling (sequence).
 
 'Solution: Use Do while + For codes.
 
