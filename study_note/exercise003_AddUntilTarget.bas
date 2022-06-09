@@ -1,3 +1,5 @@
+'*** update Jun 9: Need to add Option Base 1, otherwise codes will show error
+
 'Problem: You have 4 type of ball of red, yellow, green and blue. Each ball weights as follows,
 
 '         Red   : 60g 
@@ -13,6 +15,9 @@
 '         In above example of 130g, sequence is 2 (red as 1, yellow as 2).
 
 'Solution: Use Do while + For codes.
+
+Option Base 1
+'Without above, arr(i) will have error, as array will start from 0 to 3, while i ranges from 1 to 4.
 
 Sub calculator_click()
   Dim i, t, count, sum As Integer
