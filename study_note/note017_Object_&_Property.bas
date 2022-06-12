@@ -18,7 +18,7 @@
 '   (1) 3 ways to tell VBA to select the range:
 
      Range("A1:C10").Select
-     Range ("A1", "C10").Select
+     Range("A1", "C10").Select
      Range(Range("A1"), Range("C10")).Select
 
     '(2) If user does not know where the data ends?
