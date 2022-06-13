@@ -69,10 +69,9 @@ Sub EntryForm_Click()
   
   Cells(r, 2) = Cells(2,3).Value
   Cells(r, 3) = Val(Cells(2, 5).Value)
-  
+               'Val() will allow contents in the cells(2,5) to be transformed into number format.
   Cells(2, 3).ClearContents
   Cells(2, 5).ClearContents
 
 End Sub
 
-  
