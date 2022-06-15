@@ -61,7 +61,6 @@
           Dim fromsh, tosh As String
               fromsh = InputBox("Enter the sheet name you would like to move")
               tosh   = InputBox("Where do you want to place after?")
-
           Worksheets(fromsh).Move After:=Worksheets(tosh)
         End Sub
 
@@ -72,16 +71,13 @@
         Sub move_wksh()
           Dim fromsh, tosh As String
           On Error GoTo Err_handle
-  
               fromsh = InputBox("Enter the sheet name you would like to move")
               tosh   = InputBox("Where do you want to place after?")
-
           Worksheets(fromsh).Move After:=Worksheets(tosh)
           Exit Sub
           'Why this one has been added?
           'Without it, system will show Err_handle msgbox even if user entered correct worksheet name
           'To stop system from showing error msgbox incorrectly, make system STOP if everything worked out.
-    
           Err_handle:
             MsgBox "Please enter correct worksheet name"
         End Sub
