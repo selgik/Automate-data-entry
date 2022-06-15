@@ -42,7 +42,6 @@
           'Dim i As Integer --> won't work as system will give an error message.
           'This is because procedure will end and i value will not be stored with DIM.
           'So if you click button again, system will try to create duplicate sheet name using the same i. Static must be hence used.
-
           i = i + 1
           Worksheets.Add
           ActiveSheet.Name = "Sales-BcDo" & i
