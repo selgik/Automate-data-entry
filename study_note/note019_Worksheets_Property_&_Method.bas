@@ -4,7 +4,6 @@
 '   If you need to manage (create, move etc) worksheets regularly, use VBA codes to autoamte the process.
 '   Example: You are cleaning data and you want to transform data and auto-organize in new worksheets.
 
-
 '2. WORKSHEETS PROPERTY
 '   (1) ActiveSheet
 '       ActiveSheet.Name = "Sales" --> assign name to the sheet
@@ -16,7 +15,6 @@
 '       Example:
         Worksheet(2).activate
         ActiveSheet.name = "Summary"
-
 
 '3. WORKSHEETS METHOD
 '   (1) Worksheets.Add --> Add new worksheet before the current sheet
@@ -32,7 +30,6 @@
 '       Example:
         Worksheets("Sales").Move After:= Worksheets("Profit")
 '   (6) Worksheets.Copy Before,After:=
-
 
 '4. EXERCISE: 
 '   (1) CREATE PROCEDURE WHERE BY CLICKING A BUTTON, NEW WORKSHEET WITH CERTAIN FORMAT WILL BE GENERATED.
