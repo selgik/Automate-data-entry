@@ -70,12 +70,12 @@
               fromsh = InputBox("Enter the sheet name you would like to move")
               tosh   = InputBox("Where do you want to place after?")
           Worksheets(fromsh).Move After:=Worksheets(tosh)
-          Exit Sub
+        Exit Sub
           'Why this one has been added?
           'Without it, system will show Err_handle msgbox even if user entered correct worksheet name
           'To stop system from showing error msgbox incorrectly, make system STOP if everything worked out.
           Err_handle:
-            MsgBox "Please enter correct worksheet name"
+              MsgBox "Please enter correct worksheet name"
         End Sub
 
 '       TIP!! If want the error message to not show up, use below instead.
