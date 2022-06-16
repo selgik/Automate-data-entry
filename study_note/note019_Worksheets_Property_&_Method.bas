@@ -30,6 +30,8 @@
 '       Example:
         Worksheets("Sales").Move After:= Worksheets("Profit")
 '   (6) Worksheets.Copy Before,After:=
+'   (7) Worksheets.visible = xlSheetHidden (=false), xlSheetVisible (=true), xlSheetVeryHidden
+        Worksheets("Sales").visible = false
 
 '4. EXERCISE: 
 '   (1) CREATE PROCEDURE WHERE BY CLICKING A BUTTON, NEW WORKSHEET WITH CERTAIN FORMAT WILL BE GENERATED.
