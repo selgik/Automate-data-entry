@@ -46,14 +46,21 @@ https://user-images.githubusercontent.com/91002274/149339190-4cc7ebc1-31fd-4d58-
         - note010_Do_While(Loop).bas:                Do While Loop, Do Until
         - note011_For_Each(Loop).bas:                For Each In Next
         - note012_With.bas:                          With Selection
-        - note013_String_Functions.bas:              Instr, InStrRev, Lcase/Ucase, Ltrim/Rtrim/Trim, Left/Right, Len, Str, Strcomp, keyword search
-        - note014_Numeric&Date_Functions.bas:        Int, Round, Abs, Isnumeric, Val, Rnd | Time, Hour/Minute, Date, Year/Month/Day, Weekday, IsDate, DateAdd, DateDiff, DatePart, DateSerial, IsEmpty
+        - note013_String_Functions.bas:              Instr, InStrRev, Lcase/Ucase, Ltrim/Rtrim/Trim, Left/Right, 
+                                                     Len, Str, Strcomp, keyword search
+        - note014_Numeric&Date_Functions.bas:        Int, Round, Abs, Isnumeric, Val, Rnd | Time, Hour/Minute, 
+                                                     Date, Year/Month/Day, Weekday, IsDate, DateAdd, DateDiff, 
+                                                     DatePart, DateSerial, IsEmpty
         - note015_Array.bas:                         Option Base 1, a(n), Dim arr As Variant, Resize, Redim
         - note016_Custom_Functions.bas:              Public Function(a As ~, b As ~)
-        - note017_Object_&_Property.bas:             Range, Cell, Value, ActiveCell, CurrentRegion, Formula, Borders, Font
-        - note018_Object_&_Method.bas:               Clear, Copy, PasteSpecial, Row/Column, Rows/Columns, EntireRow, Count, Val, EntryForm
+        - note017_Object_&_Property.bas:             Range, Cell, Value, ActiveCell, CurrentRegion, Formula, 
+                                                     Borders, Font
+        - note018_Object_&_Method.bas:               Clear, Copy, PasteSpecial, Row/Column, Rows/Columns, 
+                                                     EntireRow, Count, Val, EntryForm
         - note019_Worksheets_Property_&_Method.bas:  ActiveSheet, Worksheet, Add, Move, Visible, Static i, On Error GoTo
-        - note020_Application_Property_&_Method.bas: Application, defaultFilePath, DisplayAlerts, close, SheetInNewWorkbook, StandardFont, Quit, WorksheetFunction, SendKeys, Call Shell, CutCopyMode, Applicaiton.InputBox
+        - note020_Application_Property_&_Method.bas: Application, defaultFilePath, DisplayAlerts, close, SheetInNewWorkbook, 
+                                                     StandardFont, Quit, WorksheetFunction, SendKeys, Call Shell, CutCopyMode,
+                                                     Applicaiton.InputBox
         
     2. Credit:
         - YouTube "Excel Macro Visual Basic Application" by IB 96
